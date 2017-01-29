@@ -1,0 +1,50 @@
+<div ng-controller="IncludeFileCtrl">
+    <div class="tab-content">
+        <div class="avrg-block"><span class="avrg-gpa">{{ average }}</span>
+            <div>Average GPA</div>
+        </div>
+        <span>GRADE</span>
+        <select ng-model="grade" ng-change="selectChanged($index)" class="grade-select">
+            <option value="">Choose grade</option>
+            <option value="7A">7A</option>
+            <option value="7B">7B</option>
+            <option value="7C">7C</option>
+            <option value="8A">8A</option>
+            <option value="8B">8B</option>
+            <option value="8C">8C</option>
+            <option value="9A">9A</option>
+            <option value="9B">9B</option>
+            <option value="9C">9C</option>
+            <option value="10A">10A</option>
+            <option value="10B">10B</option>
+            <option value="10C">10C</option>
+        </select>
+        <table class="school-list">
+            <tr>
+                <th>Name</th>
+                <th>GPA</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="clas in classes | thisClasses: $index">
+                <td>{{ clas.name }}</td>
+                <td>{{ clas.gpa }}</td>
+                <td><button class="delete-person" ng-click="removeStudent($index)">&#215;</button></td>
+            </tr>
+            <tr class="add-block">
+                <td><input type="text"
+                           class="name-input"
+                           placeholder="Write name"
+                           ng-model="name"></td>
+                <td><input type="number"
+                           name = "gpa"
+                           class="mark-input"
+                           placeholder="0.0"
+                           ng-model="gpa"
+                           ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+                           ng-step="0.01"></td>
+                <td><button class="add-button"
+                            ng-click="addStudent($index)">ADD</button></td>
+            </tr>
+        </table>
+    </div>
+</div>

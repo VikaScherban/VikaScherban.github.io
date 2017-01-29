@@ -1,0 +1,184 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #FFFAFA;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.avrg-block{
+    width: 100px;
+    border: 1px solid #009ACD;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 50px auto;
+    padding: 5px;
+}
+.avrg-gpa{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*Tabs Container*/
+.tabs-container{
+    border-top: 1px solid black;
+    margin-top: 30px;
+}
+.nav{
+    border-bottom: 1px solid black;
+    padding-left: 55px;
+    padding-top: 10px;
+    background-color: #40E0D0;
+    box-sizing: border-box;
+}
+.tab{
+    width: 127px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #FFFAFA;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    height: 43px;
+    box-sizing: border-box;
+}
+
+.tab.active{
+    border: 2px solid black;
+    border-bottom: 1px solid #FFFAFA;
+    top: 2px;
+}
+.tab-content{
+    font-size: 20px;
+    margin: 0 auto;
+    width: 500px;
+    margin-bottom: 40px;
+}
+.grade-select{
+    width: 128px;
+    height: 28px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    font-size: 15px;
+    margin-left: 20px;
+}
+.close-tab{
+    float: right;
+    font-size: 18px;
+    line-height: 15px;
+    cursor: pointer;
+    border: none;
+    padding: 3px;
+    background-color: #FFFAFA;
+    font-weight: bold;
+    outline: none;
+
+}
+.close-tab:hover{
+    color: darkgray;
+}
+
+.school-list{
+    margin-top: 55px;
+    border-collapse: collapse;
+}
+.school-list tr:first-child{
+    border-bottom: 1px solid black;
+}
+
+th:first-child{
+    text-align: left;
+    width: 290px;
+}
+
+.name{
+    width: 290px;
+}
+.mark{
+    text-align: center;
+}
+td, th{
+    padding: 12px !important;
+    width: 65px;
+}
+.delete-person{
+    border: none;
+    background-color: #FFFAFA;
+    cursor: pointer;
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: bold;
+    outline: none;
+    float: right;
+}
+.delete-person:hover{
+    color: darkgray;
+}
+.add-block{
+    border-top: 1px solid black;
+}
+.add-button{
+    float: right;
+    height: 30px;
+    background-color: #009ACD;
+    border: none;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.add-button:hover{
+    opacity: 0.7;
+}
+.name-input{
+    height: 30px;
+    width: 251px;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+.mark-input{
+    height: 30px;
+    width: 55px;
+    font-size: 15px;
+    padding: 5px 7px;
+    padding-right: 0;
+}
+.add-tab{
+    top: -1px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.add-tab-button{
+    vertical-align: middle;
+    font-size: 19px;
+    line-height: 19px;
+    width: 28px;
+    height: 28px;
+    background-color: #009ACD;
+    cursor: pointer;
+    border: none;
+    margin-left: 5px;
+}
+.add-tab-button:hover{
+    opacity: 0.7;
+}
+.nav-tabs{
+    height: 52px;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.nav-tabs>li{
+    float: none;
+    display: inline-block;
+}

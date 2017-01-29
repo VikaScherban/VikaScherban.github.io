@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="gpaApp">
+<head>
+    <title>School GPA calculator</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic,700italic"
+          rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="TabsDemoCtrl">
+<div id="mainCntr">
+    <uib-tabset class="tabs-container">
+        <uib-tab ng-repeat="tab in tabs" active="tab.active" disable="tab.disabled">
+            <uib-tab-heading>
+                {{tab.title}}
+                <i class="glyphicon glyphicon-remove-sign" ng-click="removeTab($event, $index)"></i>
+            </uib-tab-heading>
+            <!-- {{tab.content}} -->
+            <my-content></my-content>
+        </uib-tab>
+        <button class="add-tab-button" ng-click="addTab()">&#43;</button>
+    </uib-tabset>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+<script src="controllers.js"></script>
+</body>
+</html>
