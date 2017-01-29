@@ -173,9 +173,10 @@ td, th{
     opacity: 0.7;
 }
 .nav-tabs{
-    height: 52px;
+    height: 65px;
     white-space: nowrap;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .nav-tabs>li{
