@@ -61,9 +61,8 @@ a{
 }
 .tab-content{
     font-size: 20px;
-    margin: 0 auto;
+    margin: 60px auto;
     width: 500px;
-    margin-bottom: 40px;
 }
 .grade-select{
     width: 128px;

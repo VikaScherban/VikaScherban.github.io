@@ -10,6 +10,9 @@
 </head>
 <body ng-controller="TabsDemoCtrl">
 <div id="mainCntr">
+    <div class="avrg-block"><span class="avrg-gpa">{{ $parent.average }}</span>
+        <div>Average GPA</div>
+    </div>
     <uib-tabset class="tabs-container">
         <uib-tab ng-repeat="tab in tabs" active="tab.active" disable="tab.disabled">
             <uib-tab-heading>
