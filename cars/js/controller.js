@@ -19,6 +19,8 @@ carsApp.controller('AppCtrl', ['$scope',
             var properties = rows[0].childNodes; //List of properties of one car
             var headers = document.getElementsByClassName('cell-head');//List of all table titles
             var propnumber = 0;
+            var cell_prop_hidd = 0; //number of property in property cell for hidden
+            var titles = document.getElementsByClassName("title-tb");
 
 
             var i = 3;
@@ -31,6 +33,7 @@ carsApp.controller('AppCtrl', ['$scope',
                 //Go through the properties
                 while (k < cell_prop_length - 1){
                     var firstelem = String((carsprop[0].childNodes[k]).innerHTML);
+
                     //Go through the cars that have this property
                     for (var j = 1; j < carsprop.length; j++){
                         var secondelem = String((carsprop[j].childNodes[k]).innerHTML);
@@ -46,7 +49,8 @@ carsApp.controller('AppCtrl', ['$scope',
 
                      if (equal) {
 
-                         console.log(headers[propnumber-1]);
+                         cell_prop_hidd++;
+
                          // Add hidden class to equal elements of table line
                          for (var p = 0; p < carsprop.length; p++){
                             var elem =  carsprop[p].childNodes[k];
@@ -58,6 +62,23 @@ carsApp.controller('AppCtrl', ['$scope',
                     equal = true;
                     k += 2;
                 }
+
+
+                if ( cell_prop_hidd === (cell_prop_length-1)/2 ){
+                    //hidden all block of property cell in cars
+                    for (var r = 0; r < rows.length; r++){
+                        rows[r].childNodes[i].classList.add("hidden");
+                    }
+                    //hidden main titles of property block
+                    if (i > 3) {
+                        titles[(i - 1) / 2 - 2].classList.add("hidden");
+                    }
+                    else {
+                        titles[0].classList.add("hidden");
+                    }
+                }
+
+                cell_prop_hidd = 0;
 
                 i += 2;
             }
