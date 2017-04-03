@@ -1,0 +1,455 @@
+/*FONT*/
+@font-face {
+    font-family: 'NissanBrand-Light';
+    src: url('../fonts/NissanBrand-Light.otf');
+}
+@font-face {
+    font-family: 'NissanBrand-Bold';
+    src: url('../fonts/NissanBrand-Bold.otf');
+}
+@font-face {
+    font-family: 'NissanBrand-Regular';
+    src: url('../fonts/NissanBrand-Regular.otf');
+}
+@font-face {
+    font-family: 'NissanBrand-Italic';
+    src: url('../fonts/NissanBrand-Italic.otf');
+}
+
+/*MAIN*/
+body{
+    margin: 0;
+    background-color: #f7f7f7;
+    padding-top: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: NissanBrand-Regular, sans-serif;
+}
+h1{
+    text-align: center;
+    font-family: NissanBrand-Bold, sans-serif;
+}
+
+/*TOP*/
+.compare-block{
+    padding-top: 30px;
+}
+.buttons-box{
+    padding-top: 18px;
+}
+.filter-buttons{
+    width: 232px;
+    height: 215px;
+    border: 1px solid #d7d7d7;
+    padding: 60px 29px;
+    box-sizing: border-box;
+}
+.filter-qst{
+    font-size: 14px;
+    font-family: NissanBrand-Light, sans-serif;
+}
+.button-qst{
+    width: 80px;
+    height: 40px;
+    outline: none;
+    text-transform: uppercase;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    cursor: pointer;
+}
+.yes-button{
+    border: 1px solid #c20336;
+    color: #c20336;
+}
+.no-button{
+    border: 1px solid black;
+    margin-left: 7px;
+}
+.button-qst:hover, .buy-button:hover{
+    background-color: #d4d4d4;
+}
+.car-header{
+    width: 220px;
+    height: 215px;
+    margin: 0 auto;
+    background-color: white;
+    -moz-box-shadow: 0 2px 9px #d4d4d4;
+    -webkit-box-shadow: 0 2px 9px #d4d4d4;
+    box-shadow: 0 2px 9px #d4d4d4;
+    position: relative;
+    margin-bottom: 70px;
+}
+.star-img{
+    background: url("../images/star-icon.png") no-repeat;
+    width: 18px;
+    height: 17px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255,255,255,0.6);
+}
+.car-img{
+    width: 220px;
+    height: 162px;
+}
+.car-name, .car-prices{
+    width: 50%;
+    float: left;
+}
+.car-name{
+    font-family: NissanBrand-Bold, sans-serif;
+    padding-left: 15px;
+    padding-top: 6px;
+    box-sizing: border-box;
+    max-height: 50px;
+    overflow-y: hidden;
+    line-height: 18px;
+}
+.old-price{
+    font-family: NissanBrand-Light, sans-serif;
+    font-size: 14px;
+    line-height: 13px;
+    text-decoration: line-through;
+}
+.new-price{
+    font-family: NissanBrand-Bold, sans-serif;
+    color: #cf1141;
+    line-height: 19px;
+}
+.car-prices{
+    padding-top: 8px;
+}
+
+/*TABLE*/
+.title-tb{
+    font-size: 21px;
+    font-family: NissanBrand-Regular, sans-serif;
+    font-weight: normal;
+    line-height: 70px;
+    margin: 0;
+}
+.compare-header{
+    float: left;
+    z-index: 3;
+    position: relative;
+}
+.cell-td{
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    color: #929292;
+    font-weight: normal;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+    padding-left: 27px;
+    padding-top: 3px;
+}
+.cell-head{
+    padding-left: 15px;
+    width: 252px;
+    margin-bottom: 3px;
+}
+.row-tb{
+    float: left;
+}
+.sub-title{
+    font-size: 14px;
+    font-family: NissanBrand-Light, sans-serif;
+    clear: left;
+}
+.little-title{
+    margin-top: -15px;
+}
+.square{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    margin: 0 auto;
+    position: relative;
+    top: 7px;
+}
+.prop-equip{
+    margin-top: 91px;
+}
+.prop-secur{
+    margin-top: 47px;
+}
+.prop-advant{
+    margin-top: 73px;
+}
+.prop-salon{
+    margin-top: 73px;
+}
+.buy-button{
+    width: 221px;
+    border: 1px solid #29282e;
+    height: 40px;
+    color: #29282e;
+    outline: none;
+    text-transform: uppercase;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-bottom: 50px;
+}
+.hidden{
+    display: none;
+}
+
+/*Slider*/
+.slick-slide{
+    height: auto;
+    outline: none;
+    z-index: 1;
+}
+.slick-dots li button:before{
+    display: none;
+}
+.slick-prev:before{
+    content: '‹';
+}
+.slick-next:before {
+    content: '›';
+}
+.slick-prev, .slick-next{
+    top: 140px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 3;
+}
+.slick-prev{
+    left: 259px;
+}
+.slick-next{
+    right: 9px
+}
+.slick-prev:before, .slick-next:before{
+    font-size: 25px;
+    font-weight: bold;
+    line-height: inherit;
+}
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+    background: rgba(0,0,0,0.6);
+}
+
+/*Responsive*/
+@media all and (max-width: 1350px){
+    .cell-head:nth-child(22), .prop-salon .cell-td:nth-child(2){
+        height: 52px;
+    }
+}
+@media all and (max-width: 1250px){
+    .cell-head:nth-child(22), .prop-salon .cell-td:nth-child(2){
+        height: 30px;
+    }
+}
+@media all and (max-width: 1080px){
+    .cell-head:nth-child(22), .prop-salon .cell-td:nth-child(2){
+        height: 52px;
+    }
+}
+@media all and (max-width: 1000px){
+    .cell-head:nth-child(22), .prop-salon .cell-td:nth-child(2){
+        height: 30px;
+    }
+}
+@media all and (max-width: 815px){
+    .cell-td{
+        padding-left: 10px;
+    }
+}
+@media  screen and (max-width: 550px){
+    .cell-td{
+        padding-left: 5px;
+    }
+    .filter-buttons{
+        width: 196px;
+        padding: 60px 21px;
+    }
+    .less-size{
+        height: 52px;
+    }
+    .title-tb{
+        font-size: 18px;
+    }
+    .cell-head{
+        width: 240px;
+    }
+    .button-qst{
+        width: 68px;
+    }
+    .cell-head{
+        width: 218px;
+    }
+    .slick-prev{
+        left: 229px;
+    }
+}
+@media  screen and (max-width: 490px){
+    .cell-head:nth-child(22), .prop-salon .cell-td:nth-child(2){
+        height: 52px;
+    }
+    .buy-button{
+        width: 176px;
+    }
+    .car-header, .car-img{
+        width: 180px;
+    }
+    .car-name{
+        padding-left: 10px;
+    }
+    .old-price{
+        font-size: 12px;
+    }
+    .new-price{
+        font-size: 13px;
+    }
+    h1{
+        font-size: 18px;
+    }
+}
+@media  screen and (max-width: 450px){
+    .cell-head:nth-child(5), .prop-main .cell-td:nth-child(3){
+        height: 52px;
+    }
+    .title-tb{
+        font-size: 16px;
+    }
+    .sub-title, .little-title{
+        font-size: 12px;
+    }
+    h3{
+        margin-bottom: 16px;
+        margin-top: 14px;
+    }
+    .compare-block{
+        padding-top: 3px;
+    }
+    h1{
+        font-size: 16px;
+    }
+    .filter-buttons{
+        height: 165px;
+        width: 170px;
+        padding: 38px 21px;
+    }
+    .button-qst{
+        width: 57px;
+        height: 33px;
+    }
+    .car-header{
+        height: 165px;
+    }
+    .car-name, .car-prices{
+        width: 100%;
+    }
+    .car-name{
+        font-size: 14px;
+        padding-top: 7px;
+        line-height: 12px;
+    }
+    .car-img{
+        height:106px;
+    }
+    .car-prices{
+        padding-left: 10px;
+        padding-top: 3px;
+    }
+    .old-price{
+        font-size: 10px;
+        line-height: 9px;
+    }
+    .new-price{
+        font-size: 11px;
+        line-height: 14px;
+    }
+    .slick-prev, .slick-next{
+        top: 91px;
+    }
+    .slick-prev{
+        left: 207px;
+    }
+    .slick-next{
+        right: 5px;
+    }
+    .buy-button{
+        width: 152px;
+    }
+    .cell-head{
+        width: 200px
+    }
+}
+@media  screen and (max-width: 390px){
+    .filter-buttons{
+        width: 130px;
+        padding: 38px 7px;
+    }
+    .filter-qst{
+        font-size: 12px;
+    }
+    .button-qst{
+        width: 50px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .title-tb{
+        font-size: 14px;
+        line-height: 40px;
+        margin-top: 5px;
+    }
+    .cell-td{
+        font-size: 12px;
+        padding-top: 6px;
+    }
+    .cell-head{
+        width: 140px;
+    }
+    body{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .car-header, .car-img{
+        width: 140px;
+    }
+    .compare-header{
+        margin-right: -19px;
+    }
+    .car-header{
+        margin-bottom:45px;
+    }
+    .cell-head:nth-child(5), .prop-main .cell-td:nth-child(3){
+        height: 30px;
+    }
+    .little-title{
+        margin-top:-8px;
+        margin-bottom: 8px;
+    }
+    .prop-equip{
+        margin-top: 62px;
+    }
+    h3 {
+        margin-bottom: 9px;
+        margin-top: 9px;
+    }
+    .prop-secur {
+        margin-top: 35px;
+    }
+    .prop-advant, .prop-salon {
+        margin-top: 45px;
+    }
+    .buy-button{
+        width: 100px;
+        font-size: 14px;
+        margin-left: 25px;
+        margin-top: 18px;
+    }
+    .last-title{
+        margin-top: 15px;
+    }
+    .slick-prev {
+        left: 51%;
+    }
+    .slick-next {
+        right: 2%;
+    }
+}

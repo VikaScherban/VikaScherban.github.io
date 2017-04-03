@@ -1,0 +1,497 @@
+<html ng-app="carsApp">
+<head>
+    <title>Cars</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="wrapper" ng-controller="AppCtrl">
+    <h1>Сравнение</h1>
+
+    <!--SLIDER-->
+    <div class="compare-block">
+
+        <!--Slider Header-->
+        <div class="compare-header">
+
+            <div class="filter-buttons">
+                <span class="filter-qst">Показывать только отличия?</span>
+                <div class="buttons-box">
+                    <button class="button-qst yes-button" ng-click="yesClick()">Да</button>
+                    <button class="button-qst no-button" ng-click="noClick()">Нет</button>
+                </div>
+            </div>
+
+            <h2 class="title-tb">Основные параметры:</h2>
+            <div class="cell-td cell-head">Пробег</div>
+            <div class="cell-td cell-head">Кузов</div>
+            <div class="cell-td cell-head">Двигатель</div>
+            <div class="cell-td cell-head">Привод</div>
+
+            <h2 class="title-tb">Комплектация:</h2>
+
+            <h3 class="sub-title little-title">Комфорт</h3>
+            <div class="cell-td cell-head">Климат-контроль</div>
+            <div class="cell-td cell-head">Кондиционер</div>
+            <div class="cell-td cell-head">Литые диски</div>
+            <div class="cell-td cell-head">Мультируль</div>
+            <div class="cell-td cell-head">Парктроник</div>
+
+            <h3 class="sub-title">Безопасность</h3>
+            <div class="cell-td cell-head">ABS</div>
+            <div class="cell-td cell-head">Сигнализация</div>
+
+            <h2 class="title-tb">Приемущества:</h2>
+            <div class="cell-td cell-head less-size">100% история обслуживания</div>
+            <div class="cell-td cell-head">Aster Plus Expert</div>
+
+            <h2 class="title-tb">Автомобиль в салоне:</h2>
+            <div class="cell-td cell-head">Салон</div>
+            <div class="cell-td cell-head">Время работы</div>
+            <div class="cell-td cell-head">Телефон</div>
+            <h2 class="title-tb last-title">Варианты покупки:</h2>
+        </div>
+        <!--End Slider Header-->
+
+        <!--Car's rows-->
+
+        <div class="cars-slider">
+            <!--First Car-->
+            <div class="row-tb">
+                <div class="car-header">
+                    <img class="car-img" src="images/8118_White-Porsche-Cayman.jpg">
+                    <div class="star-img"></div>
+                    <div class="car-title">
+                        <div class="car-name">{{ cars[0] }}</div>
+                        <div class="car-prices">
+                            <div class="old-price">2 800 000 TГ</div>
+                            <div class="new-price">2 550 000 ТГ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prop-main">
+                    <div class="cell-td">94 797</div>
+                    <div class="cell-td">Внедорожник</div>
+                    <div class="cell-td">В2.4 л., Бензин (170 л.с.)</div>
+                    <div class="cell-td">Полный привод</div>
+                </div>
+                <div class="prop-equip">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-secur">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-advant">
+                    <div class="cell-td less-size">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-salon">
+                    <div class="cell-td">Aster Expert</div>
+                    <div class="cell-td">Ежедневно с 8.00 до 22.00</div>
+                    <div class="cell-td">+7 (495) 229-22-44</div>
+                </div>
+                <button class="buy-button" ng-click="getCar(0)">Купить</button>
+            </div>
+
+            <!--Second Car-->
+            <div class="row-tb">
+                <div class="car-header">
+                    <img class="car-img" src="images/35964_mercedes_benz.jpg">
+                    <div class="star-img"></div>
+                    <div class="car-title">
+                        <div class="car-name">{{ cars[1] }}</div>
+                        <div class="car-prices">
+                            <div class="old-price">2 800 000 TГ</div>
+                            <div class="new-price">2 550 000 ТГ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prop-main">
+                    <div class="cell-td">94 797</div>
+                    <div class="cell-td">Внедорожник</div>
+                    <div class="cell-td">В2.4 л., Бензин (170 л.с.)</div>
+                    <div class="cell-td">Полный привод</div>
+                </div>
+                <div class="prop-equip">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-secur">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-advant">
+                    <div class="cell-td less-size"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-salon">
+                    <div class="cell-td">Aster Expert</div>
+                    <div class="cell-td">Ежедневно с 8.00 до 22.00</div>
+                    <div class="cell-td">+7 (495) 229-22-44</div>
+                </div>
+                <button class="buy-button" ng-click="getCar(1)">Купить</button>
+            </div>
+
+            <!--Third Car-->
+            <div class="row-tb">
+                <div class="car-header">
+                    <img class="car-img" src="images/Subaru-BRZ-Wallpapers-HD.jpg">
+                    <div class="star-img"></div>
+                    <div class="car-title">
+                        <div class="car-name">{{ cars[2] }}</div>
+                        <div class="car-prices">
+                            <div class="old-price">3 800 000 TГ</div>
+                            <div class="new-price">3 540 000 ТГ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prop-main">
+                    <div class="cell-td">94 597</div>
+                    <div class="cell-td">Внедорожник</div>
+                    <div class="cell-td">В2.4 л., Бензин (150 л.с.)</div>
+                    <div class="cell-td">Полный привод</div>
+                </div>
+                <div class="prop-equip">
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-secur">
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-advant">
+                    <div class="cell-td less-size"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-salon">
+                    <div class="cell-td">Aster Expert</div>
+                    <div class="cell-td">Ежедневно с 8.00 до 22.00</div>
+                    <div class="cell-td">+7 (495) 289-52-40</div>
+                </div>
+                <button class="buy-button" ng-click="getCar(2)">Купить</button>
+            </div>
+
+            <!--Fourth Car-->
+            <div class="row-tb">
+                <div class="car-header">
+                    <img class="car-img" src="images/Porsche_panamera_turbo_grand_gt_techart_hd_wallpapers (5).jpg">
+                    <div class="star-img"></div>
+                    <div class="car-title">
+                        <div class="car-name">{{ cars[3] }}</div>
+                        <div class="car-prices">
+                            <div class="old-price">5 800 000 TГ</div>
+                            <div class="new-price">5 550 000 ТГ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prop-main">
+                    <div class="cell-td">94 790</div>
+                    <div class="cell-td">Внедорожник</div>
+                    <div class="cell-td">В2.4 л., Бензин (180 л.с.)</div>
+                    <div class="cell-td">Полный привод</div>
+                </div>
+                <div class="prop-equip">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-secur">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-advant">
+                    <div class="cell-td less-size">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-salon">
+                    <div class="cell-td">Aster Expert</div>
+                    <div class="cell-td">Ежедневно с 8.00 до 22.00</div>
+                    <div class="cell-td">+7 (495) 229-54-37</div>
+                </div>
+                <button class="buy-button" ng-click="getCar(3)">Купить</button>
+            </div>
+
+            <!--Fifth Car-->
+            <div class="row-tb">
+                <div class="car-header">
+                    <img class="car-img" src="images/white_jaguar_car_1080p_wallpaper.jpg">
+                    <div class="star-img"></div>
+                    <div class="car-title">
+                        <div class="car-name">{{ cars[4] }}</div>
+                        <div class="car-prices">
+                            <div class="old-price">4 800 000 TГ</div>
+                            <div class="new-price">4 550 000 ТГ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prop-main">
+                    <div class="cell-td">94 777</div>
+                    <div class="cell-td">Внедорожник</div>
+                    <div class="cell-td">В2.4 л., Бензин (175 л.с.)</div>
+                    <div class="cell-td">Полный привод</div>
+                </div>
+                <div class="prop-equip">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-secur">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-advant">
+                    <div class="cell-td less-size"></div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-salon">
+                    <div class="cell-td">Aster Expert</div>
+                    <div class="cell-td">Ежедневно с 8.00 до 22.00</div>
+                    <div class="cell-td">+7 (495) 229-66-84</div>
+                </div>
+                <button class="buy-button" ng-click="getCar(4)">Купить</button>
+            </div>
+
+            <!--Sixth Car-->
+            <div class="row-tb">
+                <div class="car-header">
+                    <img class="car-img" src="images/white-bmw-m5-hd-high-definitio.jpg">
+                    <div class="star-img"></div>
+                    <div class="car-title">
+                        <div class="car-name">{{ cars[5] }}</div>
+                        <div class="car-prices">
+                            <div class="old-price">5 800 000 TГ</div>
+                            <div class="new-price">5 550 000 ТГ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prop-main">
+                    <div class="cell-td">94 790</div>
+                    <div class="cell-td">Внедорожник</div>
+                    <div class="cell-td">В2.4 л., Бензин (160 л.с.)</div>
+                    <div class="cell-td">Полный привод</div>
+                </div>
+                <div class="prop-equip">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-secur">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-advant">
+                    <div class="cell-td less-size"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-salon">
+                    <div class="cell-td">Aster Expert</div>
+                    <div class="cell-td">Ежедневно с 8.00 до 22.00</div>
+                    <div class="cell-td">+7 (495) 229-56-39</div>
+                </div>
+                <button class="buy-button" ng-click="getCar(5)">Купить</button>
+            </div>
+
+            <!--Seventh Car-->
+            <div class="row-tb">
+                <div class="car-header">
+                    <img class="car-img" src="images/pexels-photo-205211.jpeg">
+                    <div class="star-img"></div>
+                    <div class="car-title">
+                        <div class="car-name">{{ cars[6] }}</div>
+                        <div class="car-prices">
+                            <div class="old-price">4 800 000 TГ</div>
+                            <div class="new-price">4 550 000 ТГ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prop-main">
+                    <div class="cell-td">94 777</div>
+                    <div class="cell-td">Внедорожник</div>
+                    <div class="cell-td">В2.4 л., Бензин (175 л.с.)</div>
+                    <div class="cell-td">Полный привод</div>
+                </div>
+                <div class="prop-equip">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-secur">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-advant">
+                    <div class="cell-td less-size"></div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-salon">
+                    <div class="cell-td">Aster Expert</div>
+                    <div class="cell-td">Ежедневно с 8.00 до 22.00</div>
+                    <div class="cell-td">+7 (495) 229-66-84</div>
+                </div>
+                <button class="buy-button" ng-click="getCar(6)">Купить</button>
+            </div>
+
+            <!--Eighth Car-->
+            <div class="row-tb">
+                <div class="car-header">
+                    <img class="car-img" src="images/9sQPzx.jpg">
+                    <div class="star-img"></div>
+                    <div class="car-title">
+                        <div class="car-name">{{ cars[7] }}</div>
+                        <div class="car-prices">
+                            <div class="old-price">2 800 000 TГ</div>
+                            <div class="new-price">2 550 000 ТГ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prop-main">
+                    <div class="cell-td">94 797</div>
+                    <div class="cell-td">Внедорожник</div>
+                    <div class="cell-td">В2.4 л., Бензин (170 л.с.)</div>
+                    <div class="cell-td">Полный привод</div>
+                </div>
+                <div class="prop-equip">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td"></div>
+                </div>
+                <div class="prop-secur">
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-advant">
+                    <div class="cell-td less-size">
+                        <div class="square"></div>
+                    </div>
+                    <div class="cell-td">
+                        <div class="square"></div>
+                    </div>
+                </div>
+                <div class="prop-salon">
+                    <div class="cell-td">Aster Expert</div>
+                    <div class="cell-td">Ежедневно с 8.00 до 22.00</div>
+                    <div class="cell-td">+7 (495) 229-22-44</div>
+                </div>
+                <button class="buy-button" ng-click="getCar(7)">Купить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/controller.js"></script>
+</body>
+</html>
