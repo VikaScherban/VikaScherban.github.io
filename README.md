@@ -10,3 +10,4 @@ VikaScherban.github.io/tenis - гра "теніс"
 
 VikaScherban.github.io/enquire/html/index.html - сайт Enquire
 
+VikaScherban.github.io/questionary - анкета на AngularJS 1.x
