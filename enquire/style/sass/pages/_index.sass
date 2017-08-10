@@ -1,0 +1,246 @@
+.tittle
+  text-align: center
+  height: 127px
+  vertical-align: middle
+  padding-top: 38px
+  +media(sm)
+    padding: 25px 16%
+    height: auto
+  +media(xs)
+    padding: 25px 12%
+    height: auto
+.tittle-param
+  font-size: 36px
+  font-family: "Playfair Display", serif
+  color: black
+  font-weight: normal
+  margin: 0
+  +media(xs)
+    font-size: 24px
+.tittle-border
+  vertical-align: middle
+.tittle-underline
+  width: 41px
+  border-top: 3px solid #DBA857
+  display: inline-block
+.article-block
+  padding-right: 16px
+  padding-left: 10px
+  position: absolute
+  bottom: 35px
+  +media(md)
+    padding-left: 0
+  +media(sm)
+    bottom: 30px
+  +media(xs)
+    padding-left: 24px
+.article-img
+  width: 100%
+  height: 290px
+  padding-top: 35px
+  padding-right: 20px
+  background-repeat: no-repeat
+  background-position: center
+  background-color: black
+  background-size: cover
+.article-img__tittle
+  font-size: 24px
+  color: white
+  font-family: "Playfair Display", serif
+.article-img_padding
+  padding: 0 5px 5px 0
+  overflow: hidden
+  a[href $=".html"]
+    display: block
+    width: 100%
+    height: 100%
+  &:hover .article-img
+    background-color: #DBA857
+    cursor: pointer
+    border: 10px solid RGBA(0,0,0,0.9)
+    box-sizing: border-box
+    padding: 10px
+  &:hover .article-img-date
+    padding-top: 10px
+    padding-left: 13px
+    color: white
+    +media(xs)
+      padding-left: 0
+  &:hover .fa-param, &:hover .rating-block__comments-number
+    color: white
+  &:hover .tittle-underline
+    border-color: white
+  &:hover .article-block
+    right: 0
+    +media(xs)
+      left: 0
+  &:hover .article-img-date_hover
+    margin-left: 18px
+    left: 20px
+    +media(xs)
+      margin-left: 5px
+  &:hover .article-img_inside-padding
+    padding-left: 15px
+.article__link
+  text-transform: uppercase
+  color: #EDEDED
+  font-size: 11px
+  margin-right: 20px
+  line-height: 33px
+  +media(sm)
+    margin-right: 8px
+  &:hover
+    color: #EDEDED
+  &.active
+    @extend %active
+  .rating-block
+    width: 100%
+    padding-top: 20px
+.rating-block
+  padding-top: 25px
+  padding-right: 23px
+  +media(sm)
+    padding-top: 15px
+.rating-block__stars,.article-img-situation
+  width: 70%
+  display: inline-block
+.rating-block__comments
+  width: 30%
+  display: inline-block
+.rating-block__comments
+  text-align: right
+.fa-param
+  color: #DBA857
+  cursor: pointer
+.rating-block__comments-number
+  font-size: 10px
+  color: #B5B5B5
+  text-transform: uppercase
+//////////////////////////////////////////
+.content-menu
+  padding-top: 7px
+.content-menu-elem
+  background-color: black
+  height: 196px
+  padding-top: 45px
+  padding-left: 20px
+  padding-right: 20px
+  cursor: pointer
+  overflow: hidden
+  +media(sm)
+    height: 432px
+    padding-left: 42px
+  +media(xs)
+    padding-left: 10px
+    padding-right: 10px
+  &:hover .content-menu__link
+    color: white
+  &:hover .tittle-underline
+    border-color: #DBA857
+.content-menu-elem_img
+  background-repeat: no-repeat
+  position: absolute
+  left: -7%
+  bottom: -20px
+.content-menu-elem__bottle
+  background-image: url("../img/bottle-big.png")
+  width: 125px
+  height: 167px
+.content-menu-elem__fork
+  background-image: url("../img/fork-and-knif-big.png")
+  width: 151px
+  height: 167px
+.content-menu-elem__ball
+  background-image: url("../img/ball-big.png")
+  width: 166px
+  height: 167px
+.content-menu__link
+  font-size: 11px
+  color: #DBA857
+  text-transform: uppercase
+  &:hover
+    color: white
+  &.active
+    @extend %active
+.article-img_height
+  height: 585px
+.article-img_inside-padding
+  padding: 38px
+  padding-top: 30px
+  +media(xs)
+    padding-left: 25px
+    padding-right: 25px
+.article-img-date
+  color: #DBA857
+  font-family: "Playfair Display", serif
+.article-img-date__number
+  font-size: 60px
+  line-height: 30px
+.article-img-date__month
+  font-size: 24px
+  margin-top: 15px
+.article-img_max-width
+  max-width: 290px
+.article-img_max-width-large
+  max-width: 346px
+.article-img-comments
+  float: right
+  line-height: 32px
+.article-img-bottom_width
+  max-width: 243px
+///////////////////////////////////////////////
+.article
+  border: 1px solid #E5E5E5
+  height: 317px
+  padding: 38px
+  cursor: pointer
+  +media(md)
+    padding: 15px
+.article-block-bottom
+  &:before
+    content: ""
+    display: block
+    height: 20px
+    position: relative
+    top: 256px
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 75%)
+  &:hover .article-img__tittle
+    color: #DBA857
+  &:hover .fa-param
+    color: #DBA857
+  &:hover .tittle-underline
+    border-color: #DBA857
+  &:hover .rating-block__comments-number
+    color: #B5B5B5
+.article-img-tittle_black
+  color: black
+.rating-block__date
+  font-size: 11px
+  color: #B5B5B5
+  text-transform: uppercase
+  width: 70%
+.article-bottom
+  position: absolute
+  bottom: 38px
+  width: 70%
+.article-text
+  padding-top: 29px
+  font-size: 14px
+  color: #444444
+  max-height: 152px
+  overflow: hidden
+  margin-top: -20px
++media(sm)
+  .tablet-tittle_height
+    height: 170px
+  .tablet-tittle_param
+    display: block
+    width: 400px
+    line-height: 40px
+    margin-bottom: 10px
++media(xs)
+  .article-img-date_hover
+    padding-left: 0
+.padding_0
+  padding-left: 0
+  padding-right: 0

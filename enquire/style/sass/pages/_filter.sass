@@ -1,0 +1,162 @@
+.establishments-menu
+  text-align: center
+  margin-top: 30px
+  padding-bottom: 30px
+  border-bottom: 1px solid #E5E5E5
+.establishments-menu__link
+  font-size: 14px
+  margin-left: 40px
+  &.active
+    @extend %active-black
+  +media(xs)
+    margin-left: 12px
+.sort-block
+  height: 48px
+  padding: 15px 38px
+  border-bottom: 1px solid #E5E5E5
+  +media(md)
+    padding: 15px 18px
+  +media(xs)
+    padding: 15px 18px
+    border-left: 1px solid #E5E5E5
+    border-right: 1px solid #E5E5E5
+    margin-bottom: 10px
+.sort-block__link
+  color: #999999
+  &.active
+    @extend %active-black
+.sort-block-count__elem
+  text-transform: uppercase
+  font-size: 12px
+  color: black
+.sort-block-count
+  text-align: center
+.sort-block-view__elem
+  text-transform: uppercase
+  font-size: 12px
+  color: #999999
+  margin-left: 9px
+  &:hover
+    color: black
+  &.active
+    @extend %active-black
+.sort-block-view
+  text-align: right
+  & a:first-child
+    +media(xs)
+      float: left
+.clear-filter
+  padding-top: 24px
+  padding-bottom: 25px
+  color: #999999
+  font-weight: 100
+  &:hover
+    color: black
+.clear-filter__text
+  font-size: 13px
+  padding-left: 7px
+.filter-tittle
+  font-size: 20px
+  font-family: "Playfair Display", serif
+
+.kind-checkbox-label
+  position: relative
+  display: block
+  -webkit-user-select: none
+  cursor: pointer
+  font-size: 13px
+div:not(.bla)
+  .kind-checkbox-label
+    padding-left: 35px
+  .label_padding
+    padding-left: 65px
+    z-index: 2
+    +media(md)
+      padding-left: 42px
+  .kind-checkbox:checked + .kind-checkbox-label:before
+    width: 10px
+    height: 10px
+    border: 2px solid white
+    background-color: #DBA857
+    outline: 1px solid #BFBFBF
+    top: 4px
+    left: 1px
+  .kind-checkbox:checked + .kind-checkbox-label
+    font-weight: bold
+  .kind-checkbox:checked ~ .fa-filter-param
+    color: #DBA857
+  .kind-checkbox-label:before
+    content: ""
+    width: 12px
+    height: 12px
+    border: 1px solid #BFBFBF
+    position: absolute
+    left: 0
+    top: 3px
+    display: block
+  .kind-checkbox
+    display: none
+.filter-count
+  font-size: 11px
+  color: #999999
+.filter-check
+  padding-top: 20px
+.fa-filter-param
+  color: #666666
+  position: relative
+  left: 32px
+  top: -18px
+  z-index: 1
+  +media(md)
+    left: 18px
+.filter-top_padding
+  padding-top: 55px
+  padding-bottom: 55px
+.filter-article_padding
+  padding-left: 40px
+  padding-right: 35px
+  +media(md)
+    padding-left: 20px
+    padding-right: 15px
+.filter-button
+  width: 62px
+  height: 55px
+  background-color: #DBA857
+  padding: 20px
+  position: absolute
+  right: -5px
+  top: 50px
+  z-index: 2
+  cursor: pointer
+  display: none
++media(xs-sm)
+  .filter-button
+    display: block
+  .phone-tablet_none
+    display: none
+  .filter-block
+    width: 50%
+    position: absolute
+    right: 57px
+    top: 50px
+    background-color: white
++media(sm)
+  .filter-tablet-poster
+    position: relative
+    left: 60px
+    width: auto
+  .filter-side-block
+    width: 47%
+    position: relative
+    left: 66px
+    padding-bottom: 0
+    height: 426px
++media(xs)
+  .filter-block
+    width: 100%
+    left: 0
+  .phone-menu_pudding
+    padding-bottom: 5px
+.phone-establishments-menu
+  height: 26px
+  overflow-y: hidden

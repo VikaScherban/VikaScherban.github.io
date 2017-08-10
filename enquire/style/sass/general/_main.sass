@@ -1,0 +1,172 @@
+body
+  font-family: "Open Sans", sans-serif
+  color: black
+.inline_block
+  display: inline-block
+.float_left
+  float: left
+.float_right
+  float: right
+.vertical-align_bottom
+  vertical-align: bottom
+ul,li
+  padding: 0
+  margin: 0
+  list-style-type: none
+a
+  color: inherit
+  cursor: pointer
+  &:hover
+    text-decoration: none
+    color: inherit
+.margin-top_0
+  margin-top: 0
+.padding-top_0
+  padding-top: 0
+.padding-left_0
+  padding-left: 0
+.padding-right_0
+  padding-right: 0
+.padding_little
+  padding-left: 5px
+  padding-right: 0
+.padding_little-sides
+  padding-left: 5px
+  padding-right: 5px
+.border_orange
+  border: 1px solid #DBA857
+.fa-color_white, .color_white
+  color: white
+.color_black
+  color: black
+.color_orange
+  color: #DBA857
+.text-align_center
+  text-align: center
+.menu-elem
+  padding-bottom: 8px
+  +media(xs)
+    padding-left: 15px
+.display_none
+  display: none
+.padding-change_0
+  padding-right: 0
+  +media(xs)
+    padding: 0
++media(sm)
+  .tablet-img_width
+    width: 200%
+    margin-left: -100%
+  .tablet-display_none
+    display: none
+  .tablet-padding_0
+    padding: 0
+  .tablet-padding-right_0
+    padding-right: 0
+  .side-block-tablet
+    margin-left: -35px
+    width: 107.5%
+  .tablet-border_none
+    border: none
+  .tablet_block
+    display: block
+.tittle-padding
+  padding-left: 21%
+  padding-right: 21%
+  +media(xs)
+    padding-left: 10%
+    padding-right: 10%
+.button
+  height: 36px
+  background-color: white
+  border: 1px solid #DBA857
+  border-radius: 5px
+  padding: 10px 15px
+  font-size: 12px
+  text-transform: uppercase
+  float: right
+  position: absolute
+  margin-top: 10px
+  right: 40px
+  +media(sm)
+    right: 5px
+  &:hover
+    background-color: #DBA857
+    color: white
+  &.active
+    color: white
+    background-color: #C99A50
+.date
+  font-size: 10px
+  color: #B5B5B5
+  text-transform: uppercase
+  padding-bottom: 5px
+.fa-margin_top
+  margin-top: 8px
+.display-only-phone
+  display: none
+.tittle-param
+  display: inline
+.height_auto
+  height: auto
+.upper-text
+  text-transform: uppercase
+  font-size: 12px
+  color: black
+  padding-right: 18px
+.color_grey
+  color: #999999
+.margin-right_20
+  margin-right: 20px
+.font-bold
+  font-weight: bold
+.margin-top-bottom
+  margin-top: 40px
+  margin-bottom: 55px
+.rating-padding
+  padding-right: 112px
+  +media(md)
+    padding-right: 65px
++media(xs)
+  .phone_display,.display-only-phone
+    display: block
+  .phone-social_param
+    padding-left: 0
+    text-align: center
+    padding-bottom: 46px
+  .phone_block
+    display: block
+  .phone-info-padding
+    padding-left: 15px
+  .phone-info_param
+    border: none
+    color: #5E8CB7
+.display_block
+  display: block
+.col-lg-2_4
+  width: 20%
+  position: relative
+  min-height: 1px
+  float: left
+  +media(sm)
+    width: 33.33333333%
+.color_green
+  color: #90CC8B
+
+
+//  Menu elements, language menu in header, elements in footer
+%active
+  padding-bottom: 5px
+  border-bottom: 2px solid #DBA857
+  color: #EDEDED
+%active-black
+  color: black
+  padding-bottom: 5px
+  border-bottom: 2px solid #DBA857
+  font-weight: bold
+
+
+@media (min-width: 1800px)
+  .adequation-block
+    width: 1800px
+    margin: 0 auto

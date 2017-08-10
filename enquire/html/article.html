@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <title>Ресторани</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic,700italic'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<header>
+    <div class="adequation-block">
+        <div class="container-fluid phone-padding_0">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-change_0">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 phone-top-header">
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-4 logo inline_block padding_0"><a
+                            href="index.html"></a></div>
+                    <div class="col-lg-7 col-md-7 col-sm-8 col-xs-8 header-info inline_block padding_0">Рейтинг
+                        розважальных закладів <span class="header-info__town">Білої Церкви</span></div>
+                </div>
+                <div class="col-xs-12 phone-middle-header">
+                    <div class="phone-button" id="phone-button-menu">
+                        <i class="fa fa-bars fa-lg"></i>
+                        <span class="phone-button__text">меню</span>
+                    </div>
+                    <div class="phone-button phone-button_margin" id="phone-button-search">
+                        <div class="phone-search-button"></div>
+                        <span class="phone-button__text">пошук</span>
+                    </div>
+                </div>
+                <ul class="col-lg-6 col-md-6 col-sm-8  col-xs-12 header-menu inline_block phone-display-none">
+                    <li class="col-lg-4 col-md-4 col-sm-4 header-menu-item" id="markers">
+                        <a class="header-menu-link markers-link" href="book.html">
+                            <div class="glass-symbol menu-symbol"></div>
+                            <span class="header-menu-link__text markers-link_black">Заклади</span>
+                        </a>
+                        <div class="open-menu">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="col-lg-7 col-md-7 col-sm-7 open-menu-elem">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 open-menu-elem_padding">
+                                        <div class="content-menu-elem__bottle open-menu-elem_img"></div>
+                                        <div class="open-menu__tittle"><a><span
+                                                class="color_black">Потусити випити</span></a></div>
+                                        <div class="tittle-underline"></div>
+                                        <ul class="open-menu-elem-links">
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Нічні клуби</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Караоке</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Стриптиз</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Лаундж</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Інше</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 open-menu-elem_padding">
+                                        <div class="content-menu-elem__fork open-menu-elem_img"></div>
+                                        <div class="open-menu__tittle"><a><span class="color_black">Поїсти випити</span></a>
+                                        </div>
+                                        <div class="tittle-underline"></div>
+                                        <ul class="open-menu-elem-links">
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Ресторани</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Кафе</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Бари</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Піцерії</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Кав'ярні</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Суші-бари</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Інше</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 open-menu-elem_padding">
+                                        <div class="content-menu-elem__ball open-menu-elem_img"></div>
+                                        <div class="open-menu__tittle"><a><span
+                                                class="color_black">Активно відпочити</span></a></div>
+                                        <div class="tittle-underline"></div>
+                                        <ul class="open-menu-elem-links">
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Кінний клуб</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Кінотеатр</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Для дітей</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Пейнбол</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Боулінг</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Більярд</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">ТРЦ</span></a></li>
+                                            <li class="menu-elem"><a class="content-menu__link"><span
+                                                    class="color_black">Інше</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-5 open-menu-img article-img_padding">
+                                    <a href="article.html">
+                                        <div class="article-img"
+                                             style="background-image: url('../img content/night-club.png')">
+                                            <div class="col-lg-6 col-md-7 col-sm-7 col-lg-offset-6 col-md-offset-5 col-sm-offset-5 article-block">
+                                                <div class="article-img__tittle">Нічний клуб дитячої вишиванки Birger
+                                                </div>
+                                                <div class="tittle-underline"></div>
+                                                <div>
+                                                    <span class="article__link">Ресторан</span>
+                                                    <span class="article__link">Випити</span>
+                                                </div>
+                                                <div class="rating-block">
+                                                    <div class="rating-block__stars float_left">
+                                                        <i class="fa fa-star fa-param"></i>
+                                                        <i class="fa fa-star fa-param"></i>
+                                                        <i class="fa fa-star fa-param"></i>
+                                                        <i class="fa fa-star-o fa-param"></i>
+                                                        <i class="fa fa-star-o fa-param"></i>
+                                                    </div>
+                                                    <div class="rating-block__comments">
+                                                        <i class="fa fa-comments-o fa-param"></i>
+                                                        <span class="rating-block__comments-number">23</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 header-menu-item tablet-padding-right_0">
+                        <a class="header-menu-link" href="#">
+                            <div class="camera-symbol menu-symbol"></div>
+                            <span class="header-menu-link__text">Фотозвіти</span>
+                        </a>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 inline_block text-align_center">
+                        <a class="header-menu-link" href="articles.html">
+                            <div class="pen-symbol menu-symbol"></div>
+                            <span class="header-menu-link__text">Статті</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 language-block phone-display-none">
+                    <ul class="col-lg-8 col-md-8 col-sm-8 language-menu">
+                        <li class="inline_block language-menu-elem"><a class="language-menu__item">Рус</a></li>
+                        <li class="inline_block language-menu-elem"><a class="language-menu__item active">Укр</a></li>
+                    </ul>
+                    <div class="col-lg-4 col-md-4 col-sm-4 search-block inline_block phone-display-none">
+                        <a>
+                            <div class="search-button"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="adequation-block">
+    <div class="container-fluid padding_little-sides">
+        <div class="col-lg-12 padding_0">
+            <div class="bread-crumbs">
+                <ul class="text-align_center">
+                    <li class="bread-crumbs__item"><a>Enquire /</a></li>
+                    <li class="bread-crumbs__item"><a>Статті /</a></li>
+                    <li class="bread-crumbs__item"><a>Поїсти і випити /</a></li>
+                    <li class="bread-crumbs__item active"><a>Ресторани</a></li>
+                </ul>
+            </div>
+            <div class="article-tittle-block text-align_center">
+                <h1 class="tittle-padding tittle-param display_block">На травневі свята на Співочому полі пройде
+                    open-air фестиваль</h1>
+                <div class="tittle-border">
+                    <div class="tittle-underline"></div>
+                </div>
+            </div>
+            <div><img src="../img%20content/restaurant-big.png" class="article-main-img"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_0">
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 padding_0">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-0 user-block_padding phone-user_param">
+                        <img src="../img%20content/man.png" class="article-face">
+                        <div class="article-face_name">Констянтин Іванов</div>
+                        <div class="text-align_center article-user-block">
+                            <div class="date">23 травня</div>
+                            <div>
+                                <a class="user-block-view">
+                                    <i class="fa fa-eye fa-param"></i>
+                                    <span class="rating-block__comments-number">234</span>
+                                </a>
+                                <a>
+                                    <i class="fa fa-comments-o fa-param"></i>
+                                    <span class="rating-block__comments-number">23</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-0 article-page-text">
+                        <span class="article-page-text__elem">В Києві на Співочому полі пройде «Kiev May-Art Picnic» — масштабний Open Air фестиваль. Де ж ще проводити травневі свята, як не відпочивати просто неба? Відтепер не потрібно їхати за місто — на «Kiev May-Art Picnic»</span>
+                        <span class="article-page-text__elem">Тепло весняного сонця і куточок мальовничої природи в центрі мегаполісу в одному з найулюбленіших ландшафтних парків міста «Співоче поле»: розваги просто неба з ранку до пізнього вечора!</span>
+                        <div class="article-page-quote">
+                            <i class="fa fa-quote-right fa-param fa-lg float_left fa-margin_top"></i>
+                            <div class="article-page-quote__text">Жива музика щодня на трьох фестивальних сценах у 4-ри
+                                годинні музичні марафони (зірки української музики від поп- і етно — до року і
+                                «альтернативи») — Тартак, Віталій Козловський, Андрій Кіше та інші.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-block_padding article-page-text_padding">
+                        <span class="article-page-text__elem">В Києві на Співочому полі пройде «Kiev May-Art Picnic» — масштабний Open Air фестиваль.<br>
+                             Де ж ще проводити травневі свята, як не відпочивати просто неба? Відтепер не потрібно їхати за місто — на «Kiev May-Art Picnic» ви знайдете все, що потрібно для щастя в довгоочікувані весняні вихідні!<br>
+                            Тепло весняного сонця і куточок мальовничої природи в центрі мегаполісу в одному з найулюбленіших ландшафтних парків міста «Співоче поле»: розваги просто неба з ранку до пізнього вечора!</span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-block_padding phone-social_param">
+                        <img src="../img%20content/social-line.png" class="social-img">
+                        <div class="hashtag-block">
+                            <ul>
+                                <li class="hashtag-block__item">
+                                    <a><span class="fa-param">&#35;</span>Жива музика</a>
+                                </li>
+                                <li class="hashtag-block__item">
+                                    <a><span class="fa-param">&#35;</span>Фестиваль</a>
+                                </li>
+                                <li class="hashtag-block__item">
+                                    <a><span class="fa-param">&#35;</span>open air</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 phone-comments-button display-only-phone"><input type="button"
+                                                                                               value="Написати коментарі"
+                                                                                               class="button phone-comm-button">
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tittle tablet-display_none phone-display-none">
+                        <span class="tittle-param">Читайте також</span>
+                        <div class="tittle-border">
+                            <div class="tittle-underline"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_0 tablet-display_none phone-display-none">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article-img_padding article-block-bottom">
+                            <a href="article.html">
+                                <div class="article">
+                                    <div class="article-img__tittle article-img-tittle_black">Фотостудія Loft 31</div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-text">Не смотря на подозрительную популярность селфи, одной
+                                        вытянутой рукой не всегда обойдешься. Мы нашли место, куда и прийти приятно, и с
+                                        кем сотрудничать – отлично.
+                                    </div>
+                                    <div class="article-bottom">
+                                        <div class="rating-block__date float_left">23 травня</div>
+                                        <div class="rating-block__comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article-img_padding article-block-bottom">
+                            <a href="article.html">
+                                <div class="article">
+                                    <div class="article-img__tittle article-img-tittle_black">Фотостудія Loft 31</div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-text">Не смотря на подозрительную популярность селфи, одной
+                                        вытянутой рукой не всегда обойдешься.
+                                    </div>
+                                    <div class="article-bottom">
+                                        <div class="rating-block__date float_left">23 травня</div>
+                                        <div class="rating-block__comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article-img_padding article-block-bottom tablet-display_none">
+                            <a href="article.html">
+                                <div class="article">
+                                    <div class="article-img__tittle article-img-tittle_black">Довгий заголовок про щось
+                                        цікаве
+                                    </div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-text">Не смотря на подозрительную популярность селфи, одной
+                                        вытянутой рукой не всегда обойдешься. Мы нашли место, куда и прийти приятно, и с
+                                        кем сотрудничать – отлично. Не смотря на подозрительную поность селфи, одной
+                                    </div>
+                                    <div class="article-bottom">
+                                        <div class="rating-block__date float_left">23 травня</div>
+                                        <div class="rating-block__comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_0 tablet-display_none phone-display-none">
+                        <img src="../img%20content/comments.jpg" style="max-width:100%"></div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 padding_0">
+                    <div class="col-lg-12 col-md-12 col-sm-7 col-xs-12 tittle side-block-tittle tablet-side-tittle">
+                        <span class="tittle-param tittle-side_param tablet-color_white">Заклади у статті</span>
+                        <div class="tittle-border">
+                            <div class="tittle-underline"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-7 col-xs-12 padding_0 tablet-img_param">
+                        <div class="article-img side-block-img"
+                             style="background-image: url('../img content/restaurant.png')">
+                            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-8 article-block padding-left_35">
+                                <div class="article-img__tittle">Ресторан Birger</div>
+                                <div class="tittle-underline"></div>
+                                <div>
+                                    <a class="article__link">Ресторан</a>
+                                    <a class="article__link">Випити</a>
+                                </div>
+                                <div class="rating-block">
+                                    <div class="rating-block__stars float_left">
+                                        <i class="fa fa-star fa-param"></i>
+                                        <i class="fa fa-star fa-param"></i>
+                                        <i class="fa fa-star fa-param"></i>
+                                        <i class="fa fa-star-o fa-param"></i>
+                                        <i class="fa fa-star-o fa-param"></i>
+                                    </div>
+                                    <div class="rating-block__comments">
+                                        <a>
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 side-block-categories">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tittle side-block-tittle">
+                            <span class="tittle-param tittle-side_param">Рубрики</span>
+                            <div class="tittle-border">
+                                <div class="tittle-underline"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-6 tablet-padding_0">
+                                <li class="side-block-elem"><a class="side-block__link">Ресторани</a></li>
+                                <li class="side-block-elem"><a class="side-block__link">Кафе</a></li>
+                                <li class="side-block-elem"><a class="side-block__link">Бари</a></li>
+                                <li class="side-block-elem"><a class="side-block__link">Піцерії</a></li>
+                            </ul>
+                            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-6 user-block_padding tablet-padding_0">
+                                <li class="side-block-elem"><a class="side-block__link">Кав'ярні</a></li>
+                                <li class="side-block-elem"><a class="side-block__link">Суши-бари</a></li>
+                                <li class="side-block-elem"><a class="side-block__link">Інше</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-5 col-xs-12 padding_0 tablet-poster_param phone-display-none">
+                        <img src="../img%20content/poster.png" class="width_100 tablet-poster_height"></div>
+                    <div class="col-sm-12 col-xs-12 tittle display-only-tablet phone_display">
+                        <span class="tittle-param">Читайте також</span>
+                        <div class="tittle-border">
+                            <div class="tittle-underline"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 padding_0 display-only-tablet phone_display">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article-img_padding article-block-bottom">
+                            <a href="article.html">
+                                <div class="article">
+                                    <div class="article-img__tittle article-img-tittle_black">Фотостудія Loft 31</div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-text">Не смотря на подозрительную популярность селфи, одной
+                                        вытянутой рукой не всегда обойдешься. Мы нашли место, куда и прийти приятно, и с
+                                        кем сотрудничать – отлично.
+                                    </div>
+                                    <div class="article-bottom">
+                                        <div class="rating-block__date float_left">23 травня</div>
+                                        <div class="rating-block__comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article-img_padding article-block-bottom">
+                            <a href="article.html">
+                                <div class="article">
+                                    <div class="article-img__tittle article-img-tittle_black">Фотостудія Loft 31</div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-text">Не смотря на подозрительную популярность селфи, одной
+                                        вытянутой рукой не всегда обойдешься.
+                                    </div>
+                                    <div class="article-bottom">
+                                        <div class="rating-block__date float_left">23 травня</div>
+                                        <div class="rating-block__comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article-img_padding article-block-bottom tablet-display_none">
+                            <a href="article.html">
+                                <div class="article">
+                                    <div class="article-img__tittle article-img-tittle_black">Довгий заголовок про щось
+                                        цікаве
+                                    </div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-text">Не смотря на подозрительную популярность селфи, одной
+                                        вытянутой рукой не всегда обойдешься. Мы нашли место, куда и прийти приятно, и с
+                                        кем сотрудничать – отлично. Не смотря на подозрительную поность селфи, одной
+                                    </div>
+                                    <div class="article-bottom">
+                                        <div class="rating-block__date float_left">23 травня</div>
+                                        <div class="rating-block__comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 padding_0 display-only-tablet"><img
+                            src="../img%20content/comments.jpg" style="max-width:100%"></div>
+                    <div class="col-lg-12 col-md-12 col-sm-5 col-xs-12 padding_0 tablet-poster_param display-only-phone">
+                        <img src="../img%20content/poster.png" class="width_100 tablet-poster_height"></div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tittle phone-display-none">
+                <span class="tittle-param">Фотозвіти</span>
+                <div class="tittle-border">
+                    <div class="tittle-underline"></div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_little phone-display-none">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article-img_padding">
+                    <a href="article.html">
+                        <div class="article-img article-img_inside-padding phone-img-height article-img_height"
+                             style="background-image: url('../img content/girls.png')">
+                            <div class="article-img-date">
+                                <div class="article-img-date__number">20</div>
+                                <div class="article-img-date__month">травня</div>
+                            </div>
+                            <div class="article-block article-img_max-width article-img-date_hover">
+                                <div class="article-img__tittle">English Community &#8220;be smart&#8221;</div>
+                                <div class="tittle-underline"></div>
+                                <div class="article-img-bottom_width">
+                                    <div class="article-img-situation float_left">
+                                        <i class="fa fa-map-marker fa-param"></i>
+                                        <span class="article__link">Нічний клуб Шоколад</span>
+                                    </div>
+                                    <div class="article-img-comments">
+                                        <i class="fa fa-comments-o fa-param"></i>
+                                        <span class="rating-block__comments-number">23</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 padding_0">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 article-img_padding">
+                        <a href="article.html">
+                            <div class="article-img article-img_inside-padding"
+                                 style="background-image: url('../img content/meeting.png')">
+                                <div class="article-img-date">
+                                    <div class="article-img-date__number">15</div>
+                                    <div class="article-img-date__month">травня</div>
+                                </div>
+                                <div class="article-block article-img_max-width article-img-date_hover">
+                                    <div class="article-img__tittle">English Community &#8220;be smart&#8221;</div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-img-bottom_width">
+                                        <div class="article-img-situation float_left">
+                                            <i class="fa fa-map-marker fa-param"></i>
+                                            <span class="article__link">Нічний клуб Шоколад</span>
+                                        </div>
+                                        <div class="article-img-comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 article-img_padding">
+                        <a href="article.html">
+                            <div class="article-img article-img_inside-padding"
+                                 style="background-image: url('../img content/boys.png')">
+                                <div class="article-img-date">
+                                    <div class="article-img-date__number">15</div>
+                                    <div class="article-img-date__month">травня</div>
+                                </div>
+                                <div class="article-block article-img_max-width article-img-date_hover">
+                                    <div class="article-img__tittle">English Community &#8220;be smart&#8221;</div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-img-bottom_width">
+                                        <div class="article-img-situation float_left">
+                                            <i class="fa fa-map-marker fa-param"></i>
+                                            <span class="article__link">Нічний клуб Шоколад</span>
+                                        </div>
+                                        <div class="article-img-comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-xs-12 tablet-img_width article-img_padding">
+                        <a href="article.html">
+                            <div class="article-img article-img_inside-padding"
+                                 style="background-image: url('../img content/beard-boy.png')">
+                                <div class="article-img-date">
+                                    <div class="article-img-date__number">7</div>
+                                    <div class="article-img-date__month">травня</div>
+                                </div>
+                                <div class="article-block article-img_max-width-large article-img-date_hover">
+                                    <div class="article-img__tittle">Дуже довий заголовок, про якусь кльову вечірку
+                                    </div>
+                                    <div class="tittle-underline"></div>
+                                    <div class="article-img-bottom_width">
+                                        <div class="article-img-situation float_left">
+                                            <i class="fa fa-map-marker fa-param"></i>
+                                            <span class="article__link">Нічний клуб Шоколад</span>
+                                        </div>
+                                        <div class="article-img-comments">
+                                            <i class="fa fa-comments-o fa-param"></i>
+                                            <span class="rating-block__comments-number">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_little phone-display-none">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-img_padding article-block-bottom">
+                    <a href="article.html">
+                        <div class="article">
+                            <div class="article-img__tittle article-img-tittle_black">Фотостудія Loft 31</div>
+                            <div class="tittle-underline"></div>
+                            <div class="article-text">Не смотря на подозрительную популярность селфи, одной вытянутой
+                                рукой не всегда обойдешься. Мы нашли место, куда и прийти приятно, и с кем сотрудничать
+                                – отлично.
+                            </div>
+                            <div class="article-bottom">
+                                <div class="rating-block__date float_left">23 травня</div>
+                                <div class="rating-block__comments">
+                                    <i class="fa fa-comments-o fa-param"></i>
+                                    <span class="rating-block__comments-number">23</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-img_padding article-block-bottom">
+                    <a href="article.html">
+                        <div class="article">
+                            <div class="article-img__tittle article-img-tittle_black">Фотостудія Loft 31</div>
+                            <div class="tittle-underline"></div>
+                            <div class="article-text">Не смотря на подозрительную популярность селфи, одной вытянутой
+                                рукой не всегда обойдешься.
+                            </div>
+                            <div class="article-bottom">
+                                <div class="rating-block__date float_left">23 травня</div>
+                                <div class="rating-block__comments">
+                                    <i class="fa fa-comments-o fa-param"></i>
+                                    <span class="rating-block__comments-number">23</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-img_padding article-block-bottom">
+                    <a href="article.html">
+                        <div class="article">
+                            <div class="article-img__tittle article-img-tittle_black">Довгий заголовок про щось цікаве
+                            </div>
+                            <div class="tittle-underline"></div>
+                            <div class="article-text">Не смотря на подозрительную популярность селфи, одной вытянутой
+                                рукой не всегда обойдешься. Мы нашли место, куда и прийти приятно, и с кем сотрудничать
+                                – отлично. Не смотря на подозрительную поность селфи, одной
+                            </div>
+                            <div class="article-bottom">
+                                <div class="rating-block__date float_left">23 травня</div>
+                                <div class="rating-block__comments">
+                                    <i class="fa fa-comments-o fa-param"></i>
+                                    <span class="rating-block__comments-number">23</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-img_padding article-block-bottom">
+                    <a href="article.html">
+                        <div class="article">
+                            <div class="article-img__tittle article-img-tittle_black">Фотостудія Loft 31</div>
+                            <div class="tittle-underline"></div>
+                            <div class="article-text">Не смотря на подозрительную популярность селфи, одной вытянутой
+                                рукой не всегда обойдешься. Мы нашли место, куда и прийти приятно, и с кем сотрудничать
+                                – отлично.
+                            </div>
+                            <div class="article-bottom">
+                                <div class="rating-block__date float_left">23 травня</div>
+                                <div class="rating-block__comments">
+                                    <i class="fa fa-comments-o fa-param"></i>
+                                    <span class="rating-block__comments-number">23</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="adequation-block">
+        <div class="footer-img"></div>
+        <div class="container-fluid footer-top">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padding_0 social-block change_md-padding">
+                    <li class="social-block__item">
+                        <i class="fa fa-facebook fa-color_white"></i>
+                    </li>
+                    <li class="social-block__item">
+                        <i class="fa fa-vk fa-color_white"></i>
+                    </li>
+                    <li class="social-block__item">
+                        <i class="fa fa-odnoklassniki fa-color_white"></i>
+                    </li>
+                    <li class="social-block__item">
+                        <i class="fa fa-twitter fa-color_white"></i>
+                    </li>
+                    <li class="social-block__item">
+                        <i class="fa fa-google-plus fa-color_white"></i>
+                    </li>
+                </ul>
+                <div class="col-lg-9 col-md-9 col-sm-6 padding_0 phone-display-none">
+                    <div class="col-lg-4 col-md-4  col-sm-12 change_md-padding">
+                        <div class="footer-menu-tittle__img footer-menu-tittle-bottle inline_block"></div>
+                        <div class="inline_block">
+                            <div class="footer-menu-tittle__text">Потусити, випити</div>
+                            <div class="tablet-display_none">
+                                <div class="col-lg-6 col-md-6 padding-left_0 ">
+                                    <ul>
+                                        <li class="menu-elem"><a class="footer-menu__link">Нічні клуби</a></li>
+                                        <li class="menu-elem"><a class="footer-menu__link">Караоке</a></li>
+                                        <li class="menu-elem"><a class="footer-menu__link">Стриптиз</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 padding-right_0">
+                                    <ul>
+                                        <li class="menu-elem"><a class="footer-menu__link">Лаундж</a></li>
+                                        <li class="menu-elem"><a class="footer-menu__link">Інше</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 change_md-padding">
+                        <div class="footer-menu-tittle__img footer-menu-tittle-fork inline_block"></div>
+                        <div class="inline_block">
+                            <div class="footer-menu-tittle__text">Поїсти, випити</div>
+                            <div class="tablet-display_none">
+                                <div class="col-lg-6 col-md-6 padding-left_0">
+                                    <ul>
+                                        <li class="menu-elem"><a class="footer-menu__link">Ресторан</a></li>
+                                        <li class="menu-elem"><a class="footer-menu__link">Кафе</a></li>
+                                        <li class="menu-elem"><a class="footer-menu__link">Бари</a></li>
+                                        <li class="menu-elem"><a class="footer-menu__link">Піцерії</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 padding-right_0">
+                                    <ul>
+                                        <li class="menu-elem"><a class="footer-menu__link">Кав'ярні</a></li>
+                                        <li class="menu-elem"><a class="footer-menu__link">Суші-бари</a></li>
+                                        <li class="menu-elem"><a class="footer-menu__link">Інше</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 change_md-padding">
+                        <div class="footer-menu-tittle__img footer-menu-tittle-boll inline_block"></div>
+                        <div class="inline_block">
+                            <div class="footer-menu-tittle__text">Активно відпочити</div>
+                            <div class="tablet-display_none">
+                                <div class="col-lg-6 col-md-6 padding-left_0">
+                                    <ul>
+                                        <li class="footer-menu-elem"><a class="footer-menu__link">Кінний клуб</a></li>
+                                        <li class="footer-menu-elem"><a class="footer-menu__link">Кінотеатр</a></li>
+                                        <li class="footer-menu-elem"><a class="footer-menu__link">Для дітей</a></li>
+                                        <li class="footer-menu-elem"><a class="footer-menu__link">Пейнбол</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 padding-right_0">
+                                    <ul>
+                                        <li class="footer-menu-elem"><a class="footer-menu__link">Боулінг</a></li>
+                                        <li class="footer-menu-elem"><a class="footer-menu__link">Більярд</a></li>
+                                        <li class="footer-menu-elem"><a class="footer-menu__link">ТРЦ</a></li>
+                                        <li class="footer-menu-elem"><a class="footer-menu__link">Інше</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="adequation-block">
+            <div class="container-fluid">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 phone-padding_0">
+                        <div class="footer-bottom-links">
+                            <a class="footer-bottom-links__link">&copy;Enquire, 2015.</a>
+                            <a class="footer-bottom-links__link">Про проект</a>
+                            <a class="footer-bottom-links__link">Умови користування сайтом</a>
+                            <a class="footer-bottom-links__link">Рекламодавцям</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-align_center">
+                        <a class="footer-bottom-links__link footer-bottom-links__last">Зроблено в студії бублієнко</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/frontend.js"></script>
+</body>
+</html>

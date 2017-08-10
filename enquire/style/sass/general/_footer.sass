@@ -1,0 +1,134 @@
+footer
+  background-image: url("../img/background-footer.png")
+  background-repeat: repeat
+  height: 298px
+  width: 100%
+  +media(xs)
+    height: 400px
+.footer-img
+  background-image: url("../img/logo-large.png")
+  width: 323px
+  height: 298px
+  background-repeat: no-repeat
+  position: absolute
+  +media(xs)
+    width: 50%
+    height: 50%
+    background-size: contain
+.footer-top
+  height: 224px
+  padding-top: 45px
+  +media(sm)
+    height: 266px
+  +media(xs)
+    height: auto
+    padding-top: 30px
+    padding-bottom: 24px
+.footer-bottom
+  height: 74px
+  background-color: black
+  padding-top: 27px
+  +media(sm)
+    height: 150px
+  +media(xs)
+    height: 308px
+.social-block__item
+  display: inline-block
+  width: 35px
+  height: 35px
+  border: 1px solid #DBA857
+  border-radius: 5px
+  background-image: url("../img/background-footer.png")
+  background-repeat: repeat
+  text-align: center
+  padding-top: 7px
+  margin-right: 6px
+  margin-bottom: 6px
+  cursor: pointer
+.footer-menu-tittle-bottle
+  background-image: url("../img/bottle.png")
+  width: 11px
+  height: 24px
+  +retina
+    background-image: url("../img/bottle-large.png")
+    background-size: cover
+.footer-menu-tittle-fork
+  background-image: url("../img/fork-and-knif.png")
+  width: 19px
+  height: 24px
+  +retina
+    background-image: url("../img/fork-and-knif-large.png")
+    background-size: cover
+.footer-menu-tittle-boll
+  background-image: url("../img/ball.png")
+  width: 24px
+  height: 24px
+  +retina
+    background-image: url("../img/ball-large.png")
+    background-size: cover
+.footer-menu-tittle__img
+  background-repeat: no-repeat
+  margin-right: 18px
+  +media(md)
+    margin-right: 1px
+.footer-menu-tittle
+  padding-bottom: 20px
+.footer-menu-tittle__text
+  font-size: 20px
+  font-family: "Playfair Display", serif
+  color: #DBA857
+  padding-bottom: 15px
+  padding-right: 15px
+  cursor: pointer
+.footer-menu-elem
+  padding-bottom: 12px
+.footer-menu__link
+  font-size: 11px
+  color: white
+  text-transform: uppercase
+  &:hover
+    color: white
+  &.active
+    @extend %active
+.footer-bottom-links
+  padding-left: 30px
+  +media(sm)
+    padding-bottom: 47px
+  & a:first-child
+    +media(xs)
+      text-align: right
+      margin-bottom: 80px
+  & a:last-child
+    +media(xs)
+      margin-bottom: 50px
+  +media(xs)
+    padding: 0
+.footer-bottom-links__link
+  font-size: 11px
+  text-transform: uppercase
+  color: #636363
+  margin-right: 5%
+  &:hover
+    color: #23527c
+  +media(xs)
+    display: block
+    margin-bottom: 30px
+.footer-bottom-links__last
+  margin: 0
+  float: right
+  +media(sm)
+    float: none
+  +media(xs)
+    float: none
+    color: white
+.change_md-padding
+  +media(md)
+    padding-left: 0
+    padding-right: 0
+  +media(sm)
+    padding-bottom: 30px
++media(xs)
+  .phone-display-none
+    display: none
+  .social-block
+    text-align: center
