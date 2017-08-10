@@ -9,7 +9,7 @@ carsApp.controller('AppCtrl', ['$scope',
             "Jaguar", "BMW M5", "Audi", "BMW"];
 
         $scope.getCar = function (index) {
-            console.log($scope.cars[index]);
+            alert($scope.cars[index]);
         };
 
 
