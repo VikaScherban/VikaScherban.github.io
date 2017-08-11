@@ -79,22 +79,22 @@ Game.prototype.render = function() {
 
         // none
         case this.STATUS.NONE:
-            this.showMsg('Snake Game', 'Press space to play');
+            this.showMsg('Snake Game', 'Press Space to play');
             break;
 
         // game over
         case this.STATUS.GAMEOVER:
-            this.showMsg('Game Over', 'Press space to play', 'Score: ' + this.score);
+            this.showMsg('Game Over', 'Press Space to play', 'Score: ' + this.score);
             break;
 
         // game win
         case this.STATUS.GAMEWIN:
-            this.showMsg('You Win!', 'Press space to play', 'Score: ' + this.score);
+            this.showMsg('You Win!', 'Press Space to play', 'Score: ' + this.score);
             break;
 
         // pause
         case this.STATUS.PAUSE:
-            this.showMsg('Pause', 'Press space to continue');
+            this.showMsg('Pause', 'Press Space to continue');
             break;
     }
 };

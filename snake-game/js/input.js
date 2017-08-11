@@ -11,7 +11,7 @@
 
     function isKey(key) {
         var code;
-        if (typeof keys[key] !== 'undefouned'){
+        if (typeof keys[key] !== 'undefined'){
             code = keys[key];
         }else {
             code = key.charCodeAt(0);
