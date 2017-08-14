@@ -48,12 +48,12 @@ Ball.prototype.update = function () {
         }
     }
     //удар об нижню стінку
-    if (this.drawY>canvasHeight) {
+    if (this.drawY + this.radius - 1 > canvasHeight) {
         this.yspeed = -this.yspeed;
         this.dir = "MOVE";
     }
     //удар об верхню стінку
-    if (this.drawY<0){
+    if (this.drawY - this.radius + 1 < 0){
         this.yspeed = -this.yspeed;
         this.dir = "MOVE";
     }
@@ -81,8 +81,8 @@ Ball.prototype.BallMove= function () {
 };
 
 function Ball() {
-    this.drawX = 0;
-    this.drawY = 0;
+    this.drawX = 10;
+    this.drawY = 10;
     this.radius = 10;
     this.speed = 3;
     this.xspeed = 3;
