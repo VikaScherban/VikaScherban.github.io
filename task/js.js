@@ -9,10 +9,13 @@ document.querySelector("#calcForm").addEventListener("submit", function(e){
     let validFirstY = validValue(pointFirstY);
     let validSecondX = validValue(pointSecondX);
     let validSecondY = validValue(pointSecondY);
-    let validDistance = validValue(distance);
-    if( !validFirstX || !validFirstY || !validSecondX || !validSecondY || !validDistance){
+    let validDistance = validDistanceValue(distance);
+    if( !validFirstX || !validFirstY || !validSecondX || !validSecondY){
         e.preventDefault();
         writeError("The data is not correct.");
+    }else if (!validDistance){
+        e.preventDefault();
+        writeError("Distance must be a number and greater than 0");
     }else {
         const A = new Point(+pointFirstX.value, +pointFirstY.value);
         const B = new Point(+pointSecondX.value, +pointSecondY.value);
@@ -49,6 +52,15 @@ validValue = (a) =>{
     }else a.closest('.form-group').classList.remove("has-error");
 
     return !isNaN(val);
+}
+
+validDistanceValue = (a) =>{
+    let val = +a.value;
+    if (isNaN(val) || val <= 0){
+        a.closest('.form-group').classList.add("has-error");
+    }else a.closest('.form-group').classList.remove("has-error");
+
+    return !isNaN(val) && (val > 0);
 }
 
 writeError = (mes) =>{
