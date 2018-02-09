@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<form class="form" id="calcForm">
+    <div>
+        <div>
+            <h3>Point1: </h3>
+                <div class="form-group">
+                    <label for="pointFirstX">X: </label>
+                    <input type="text" id="pointFirstX" class="form-control" onchange="defaultState(this)" placeholder="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="pointFirstY">Y:</label>
+                    <input type="text" id="pointFirstY" class="form-control" onchange="defaultState(this)" placeholder="10" required>
+                </div>
+
+        </div>
+        <div>
+            <h3>Point2: </h3>
+                <div class="form-group">
+                    <label for="pointSecondX">X:</label>
+                    <input type="text" id="pointSecondX" class="form-control" onchange="defaultState(this)" placeholder="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="pointSecondY">Y:</label>
+                    <input type="text" id="pointSecondY" class="form-control" onchange="defaultState(this)" placeholder="10" required>
+                </div>
+        </div>
+        <div>
+            <h3>Distance: </h3>
+                <div class="form-group">
+                    <input type="text" id="distance"  class="form-control" onchange="defaultState(this)" placeholder="10" required>
+                </div>
+        </div>
+
+        <button type="submit" id="calculate" class="btn btn-primary calc-btn">Calculate</button>
+    </div>
+    <div class="alert alert-success result-calc" id="resultBlock">
+        <strong>Success result!</strong>
+        <p>Point1: ( <span id="pointFirst"></span> )</p>
+        <p>Point2: ( <span id="pointSecond"></span> )</p>
+    </div>
+    <div class="alert alert-danger error-message" id="errorMessage">
+        <strong>Error!</strong> <span id="errorText"></span>
+    </div>
+</form>
+
+<script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.form{
+    width: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 100px auto;
+}
+.form-group{
+    width: 148px;
+    padding: 0 5px;
+    display: inline-block;
+}
+.calc-btn{
+    margin-top: 20px;
+    width: 300px;
+}
+.error-message{
+    margin-top: 30px;
+    display: none;
+}
+.result-calc{
+    margin-top: 30px;
+    display: none;
+}
