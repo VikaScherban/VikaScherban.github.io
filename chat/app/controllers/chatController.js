@@ -4,7 +4,7 @@
 
 'use strict';
 
-angular.module("myApp", ['ngRoute','pubnub.angular.service'])
+angular.module("myApp", ['pubnub.angular.service'])
     .controller('ChatCtrl', function($scope, Pubnub) {
         $scope.channel = 'messages-channel';""
         // Generating a random uuid between 1 and 10000 using an utility function from the lodash library.

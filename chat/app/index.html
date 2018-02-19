@@ -10,10 +10,10 @@
   <base href="./">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="./bower_components/html5-boilerplate/dist/css/main.css">
+
+  <!--<link rel="stylesheet" href="./bower_components/html5-boilerplate/dist/css/main.css">-->
   <link rel="stylesheet" href="./app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
   <!--[if lt IE 7]>
@@ -23,7 +23,7 @@
   <div ng-controller="ChatCtrl">
     <ul>
       <li ng-repeat="message in messages">
-        <img src="{{avatarUrl(message.sender_uuid)}}" alt="{{message.sender_uuid}}">
+        <img ng-src="{{avatarUrl(message.sender_uuid)}}" alt="{{message.sender_uuid}}">
         <span class="title">Anonymous robot #{{ message.sender_uuid }}</span>
         <p>{{ message.date | date:"MM/dd/yyyy 'at' h:mma"}}</br> {{ message.content }}</p>
       </li>
@@ -38,8 +38,6 @@
   <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  <!--<script src="bower_components/angular/angular.js"></script>-->
-  <script src="./bower_components/angular-route/angular-route.js"></script>
   <script src="https://cdn.pubnub.com/pubnub-3.7.21.js"></script>
   <script src="https://cdn.pubnub.com/sdk/pubnub-angular/pubnub-angular-3.2.1.js"></script>
   <script src="./controllers/chatController.js"></script>
