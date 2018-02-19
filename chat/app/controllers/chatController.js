@@ -1,7 +1,3 @@
-/**
- * Created by stranger on 18.02.18.
- */
-
 'use strict';
 
 angular.module("myApp", ['pubnub.angular.service'])
@@ -48,7 +44,10 @@ angular.module("myApp", ['pubnub.angular.service'])
 // Listening to the callbacks
         $scope.$on(Pubnub.getMessageEventNameFor($scope.channel), function (ngEvent, m) {
             $scope.$apply(function () {
-                $scope.messages.push(m)
+                $scope.messages.push(m);
+
+                var element = document.getElementById("comments");
+                element.scrollTop = element.scrollHeight;
             });
         });
 
@@ -56,5 +55,13 @@ angular.module("myApp", ['pubnub.angular.service'])
         $scope.avatarUrl = function(uuid){
             return 'http://robohash.org/'+uuid+'?set=set2&bgset=bg2&size=70x70';
         };
+
+        $scope.isActive = false;
+
+        //Search
+        $scope.searchFunction = function () {
+            $scope.isActive = !$scope.isActive;
+        };
+
 
     });

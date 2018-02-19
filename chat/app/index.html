@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="stylesheet" href="./bower_components/html5-boilerplate/dist/css/main.css">-->
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
@@ -18,19 +18,111 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-controller="ChatCtrl">
-    <ul>
-      <li ng-repeat="message in messages">
-        <img ng-src="{{avatarUrl(message.sender_uuid)}}" alt="{{message.sender_uuid}}">
-        <span class="title">Anonymous robot #{{ message.sender_uuid }}</span>
-        <p>{{ message.date | date:"MM/dd/yyyy 'at' h:mma"}}</br> {{ message.content }}</p>
-      </li>
-    </ul>
-    <form ng-submit="sendMessage()">
-      <input ng-model="messageContent" type="text" placeholder="Type your message" />
-      <button type="submit">Send</button>
-    </form>
+  <div class="main-wrapper" ng-controller="ChatCtrl">
+    <!--HEADER-->
+    <div class="header">
+      <div class="top-header">
+        <div class="left-part">
+          <img src="images/menu-icon.png" class="menu-img">
+          <div class="retreat"></div>
+          <div class="news-button button">News</div>
+        </div>
+        <div class="open-menu">
+          <div class="button back">
+            <img src="images/back.png">
+          </div>
+          <div class="button comment-button">
+            <img src="images/comment.png">
+          </div>
+          <div class="button mark">
+            <img src="images/bookmark2.png">
+          </div>
+          <div class="button symbol">
+            <img src="images/chars.png">
+          </div>
+          <div class="button share">
+            <img src="images/share.png">
+          </div>
+        </div>
+        <div class="logo">
+          <a href="#"><img src="images/logo.png" class="logo-img"></a>
+        </div>
+        <div class="right-part">
+          <div class="button chars">
+            <img src="images/chars.png">
+          </div>
+          <div class="button search" ng-click="searchFunction()">
+            <img src="images/search.png">
+          </div>
+          <div class="avatar">
+            <img src="images/avatar.jpg" class="avatar-img">
+          </div>
+          <div class="button bookmark">
+            <img src="images/bookmark.png">
+          </div>
+          <div class="search-block" ng-class="{'display-none': !isActive}">
+            <input type="text" ng-model="searchText" class="input-search" placeholder="Write something..">
+            <input type="button" id="search" class="search-button" value="Find">
+          </div>
+        </div>
+
+      </div>
+      <div class="bottom-header padding-wrap">
+        <div class="left-header half">Free Chat</div>
+        <div class="right-header half">
+          <div class="wrap-buttons">
+            <div class="nav-button active">Best</div>
+            <div class="nav-button">Newest</div>
+            <div class="nav-button">Oldest</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--CONTENT-->
+    <div class="content"  id="comments">
+      <div class="comments padding-wrap" >
+        <ul>
+          <li ng-repeat="message in messages| filter: searchText"
+              repeat-complete="listDidRender()"
+              class="comment">
+            <img ng-src="{{avatarUrl(message.sender_uuid)}}" alt="{{message.sender_uuid}}" class="com-avatar">
+            <div class="user-text">
+              <div class="user-name">User #{{ message.sender_uuid }}</div>
+              <div class="user-comment">{{ message.content }}</div>
+            </div>
+
+            <div class="comment-date">
+              <div class="date-block">
+                <img src="images/clock.png">
+                <span class="date">{{ message.date | date:"MM/dd/yyyy"}} at </span>
+                <span class="time">{{ message.date | date: "h:mma"}}</span>
+              </div>
+              <div class="like-block">
+                <img src="images/like.png">
+                <span class="likes">12</span>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+
+      </div>
+      <!--<div class="loading">-->
+        <!--<span>Loading comments...</span>-->
+      <!--</div>-->
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer padding-wrap" id="footer">
+      <div class="write-comment padding-wrap">
+        <form ng-submit="sendMessage()">
+          <input ng-model="messageContent" class="comment-text" type="text" placeholder="Write something.." />
+          <button type="submit" class="submit-button">Send</button>
+        </form>
+      </div>
+    </div>
   </div>
+
 
 <!--In production use:-->
   <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>-->
@@ -39,6 +131,9 @@
   <script src="https://cdn.pubnub.com/pubnub-3.7.21.js"></script>
   <script src="https://cdn.pubnub.com/sdk/pubnub-angular/pubnub-angular-3.2.1.js"></script>
   <script src="controllers/chatController.js"></script>
+  <script src="components/message-factory.js"></script>
+  <script src="components/repeat-complete.directive.js"></script>
+
 
 </body>
 </html>
