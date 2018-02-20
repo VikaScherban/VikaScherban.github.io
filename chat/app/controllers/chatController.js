@@ -53,7 +53,7 @@ angular.module("myApp", ['pubnub.angular.service'])
 
 // A function to display a nice uniq robot avatar
         $scope.avatarUrl = function(uuid){
-            return 'http://robohash.org/'+uuid+'?set=set2&bgset=bg2&size=70x70';
+            return 'https://robohash.org/'+uuid+'?set=set2&bgset=bg2&size=70x70';
         };
 
         $scope.isActive = false;
