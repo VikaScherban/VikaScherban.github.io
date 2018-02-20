@@ -180,7 +180,7 @@ input {
 /*CONTENT*/
 .content{
     height: calc(100vh - 385px);
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     overflow: auto;
 }
 
