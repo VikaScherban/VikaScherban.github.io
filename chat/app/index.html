@@ -82,9 +82,6 @@
 
   <div class="map-block">
     <div id="map"></div>
-    <div id="class" ng-repeat="marker in markers">
-      <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
-    </div>
   </div>
 
     <!--CONTENT-->
@@ -96,7 +93,7 @@
               class="comment">
             <img ng-src="{{avatarUrl(message.sender_uuid)}}" alt="{{message.sender_uuid}}" class="com-avatar">
             <div class="user-text">
-              <div class="user-name">User #{{ message.sender_uuid }}</div>
+              <a class="user-name" ng-click="openInfoWindow($event, message.sender_uuid)">User #{{ message.sender_uuid }}</a>
               <div class="user-comment">{{ message.content }}</div>
             </div>
 
@@ -145,7 +142,6 @@
   <script src="controllers/chatController.js"></script>
   <script src="components/message-factory.js"></script>
   <script src="components/repeat-complete.directive.js"></script>
-  <!--<script src="components/map.js"></script>-->
 
 
 </body>

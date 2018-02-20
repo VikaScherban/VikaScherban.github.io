@@ -205,7 +205,12 @@ input {
 
 .user-name {
     font-weight: bold;
-    margin-bottom: 7px; }
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+.user-name:hover{
+    opacity: 0.7;
+}
 
 .comment-date {
     display: inline-block;

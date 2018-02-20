@@ -14,7 +14,7 @@ angular.module("myApp", ['pubnub.angular.service'])
         };
 
         $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        $scope.markers = [];
+        $scope.marker;
         $scope.users = [];
         var infoWindow = new google.maps.InfoWindow();
 
@@ -32,21 +32,21 @@ angular.module("myApp", ['pubnub.angular.service'])
                 infoWindow.open($scope.map, marker);
             });
 
-            $scope.markers.push(marker);
+            $scope.marker = marker;
 
         };
 
+        var pos;
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
-                var pos = {
+                pos = {
                     name: "User #" + $scope.uuid,
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
                 };
 
                 $scope.users.push(pos);
-
                 createMarker(pos);
 
                 infoWindow.setPosition(pos);
@@ -67,9 +67,18 @@ angular.module("myApp", ['pubnub.angular.service'])
                 'Error: The Geolocation service failed.' :
                 'Error: Your browser doesn\'t support geolocation.');
         }
-        $scope.openInfoWindow = function(e, selectedMarker){
+        $scope.openInfoWindow = function(e, selectedUserName){
             e.preventDefault();
-            google.maps.event.trigger(selectedMarker, 'click');
+            for (var i = 0; i < $scope.messages.length; i++){
+                if ($scope.messages[i].sender_uuid === selectedUserName) {
+                    createMarker($scope.messages[i].pos);
+
+                    google.maps.event.trigger($scope.marker, 'click');
+                }
+            }
+
+
+
         };
 
         //PubNub
@@ -88,16 +97,15 @@ angular.module("myApp", ['pubnub.angular.service'])
             }
             Pubnub.publish({
                 channel: $scope.channel,
+
                 message: {
                     content: $scope.messageContent,
                     sender_uuid: $scope.uuid,
-                    date: new Date()
+                    date: new Date(),
+                    pos: pos
                 },
                 callback: function(m) {
                     console.log(m);
-
-                    var element = document.getElementById("comments");
-                    element.scrollTop = element.scrollHeight;
                 }
             });
             // Reset the messageContent input
@@ -124,6 +132,12 @@ angular.module("myApp", ['pubnub.angular.service'])
         $scope.avatarUrl = function(uuid){
             var element = document.getElementById("comments");
             element.scrollTop = element.scrollHeight + 100;
+
+            for (var i = 0; i < $scope.messages.length; i++ ){
+                createMarker($scope.messages[i].pos);
+            }
+
+
             return 'https://robohash.org/'+uuid+'?set=set2&bgset=bg2&size=70x70';
         };
 
