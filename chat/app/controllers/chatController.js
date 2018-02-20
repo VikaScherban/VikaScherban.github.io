@@ -31,6 +31,9 @@ angular.module("myApp", ['pubnub.angular.service'])
             // Reset the messageContent input
             $scope.messageContent = '';
 
+            var element = document.getElementById("comments");
+            element.scrollTop = element.scrollHeight;
+
         };
 
         $scope.messages = [];
@@ -45,9 +48,6 @@ angular.module("myApp", ['pubnub.angular.service'])
         $scope.$on(Pubnub.getMessageEventNameFor($scope.channel), function (ngEvent, m) {
             $scope.$apply(function () {
                 $scope.messages.push(m);
-
-                var element = document.getElementById("comments");
-                element.scrollTop = element.scrollHeight;
             });
         });
 

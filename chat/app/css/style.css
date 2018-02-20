@@ -24,7 +24,7 @@ input {
 
 /*HEADER*/
 .header {
-    height: 380px;
+    height: 300px;
     background-color: #ec5e2e;
     color: white; }
 
@@ -111,7 +111,7 @@ input {
     display: none; }
 
 .bookmark {
-    margin-top: 22px; }
+    margin-top: 11px; }
 @media (max-width: 1545px) {
     .bookmark {
         display: none; } }
@@ -205,7 +205,7 @@ input {
 
 .user-name {
     font-weight: bold;
-    margin-bottom: 25px; }
+    margin-bottom: 7px; }
 
 .comment-date {
     display: inline-block;
@@ -258,13 +258,6 @@ input {
     padding-right: 30px;
     outline: none; }
 
-@media (max-width: 640px) {
-    .comment-text {
-        margin-left: 0;
-        border: none;
-        background-position: 10px 22px;
-        } }
-
 .submit-button {
     float: right;
     background-color: #f96330;
@@ -288,7 +281,7 @@ input {
     opacity: 0.7; }
 
 .write-comment {
-    width: 79%;
+    width: 80%;
     margin-top: 5px;
     z-index: 1;
 }
@@ -384,7 +377,7 @@ input {
     .comment-date {
         width: 25%; }
     .user-text {
-        width: 55%; }
+        width: calc(100% - 367px); }
     .right-footer {
         width: 100%;
         text-align: center;
@@ -446,23 +439,21 @@ input {
     .right-header {
         margin-top: 7px;
     }
+    .padding-wrap {
+        padding-left: 32px;
+        padding-right: 32px; }
+    .left-header {
+        font-size: 34px; }
 }
 
 @media all and (max-width: 640px) {
 
-    .left-header {
-        font-size: 34px; }
-    .padding-wrap {
-        padding-left: 32px;
-        padding-right: 32px; }
     .user-comment {
         width: 140%; }
     .date-block {
         margin-right: 30px; }
     .user-text {
         margin-left: 25px; }
-    .loading, .footer, .write-comment img {
-        display: none; }
     .write-comment {
         margin-bottom: 0; }
     .submit-button {
@@ -471,3 +462,25 @@ input {
 @media all and (max-width: 615px) {
     .back, .comment-button, .mark {
         margin-right: 16%; } }
+
+
+@media (max-width: 780px) {
+    .comments.padding-wrap{
+        padding: 0 10px;
+    }
+    .comment-date{
+        width: 125px;
+    }
+    .user-text {
+        width: calc(100% - 270px);
+    }
+    .content{
+        height: calc(100vh - 287px);
+    }
+}
+
+@media (max-width: 520px) {
+    .nav-button{
+        width: 115px;
+    }
+}
