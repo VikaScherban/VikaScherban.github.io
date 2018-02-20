@@ -36,28 +36,28 @@ angular.module("myApp", ['pubnub.angular.service'])
 
         $scope.messages = [];
 
-// Subscribing to the ‘messages-channel’ and trigering the message callback
+        // Subscribing to the ‘messages-channel’ and trigering the message callback
         Pubnub.subscribe({
             channel: $scope.channel,
             triggerEvents: ['callback']
         });
 
-// Listening to the callbacks
+        // Listening to the callbacks
         $scope.$on(Pubnub.getMessageEventNameFor($scope.channel), function (ngEvent, m) {
             $scope.$apply(function () {
                 $scope.messages.push(m);
             });
         });
 
-// A function to display a nice uniq robot avatar
+        // A function to display a nice uniq robot avatar
         $scope.avatarUrl = function(uuid){
             var element = document.getElementById("comments");
             element.scrollTop = element.scrollHeight + 100;
             return 'https://robohash.org/'+uuid+'?set=set2&bgset=bg2&size=70x70';
         };
 
-        $scope.isActive = false;
 
+        $scope.isActive = false;
         //Search
         $scope.searchFunction = function () {
             $scope.isActive = !$scope.isActive;

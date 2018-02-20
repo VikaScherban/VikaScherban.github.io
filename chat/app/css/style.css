@@ -285,7 +285,10 @@ input {
     margin-top: 5px;
     z-index: 1;
 }
-
+#map {
+    height: 400px;
+    width: 100%;
+}
 .write-comment form{
     display: inline;
 }
@@ -381,7 +384,11 @@ input {
     .right-footer {
         width: 100%;
         text-align: center;
-        margin-top: 45px; } }
+        margin-top: 45px; }
+    .write-comment{
+        width: 88%;
+    }
+}
 
 @media all and (max-width: 1205px) {
     .back, .comment-button, .mark {
@@ -425,7 +432,11 @@ input {
         margin-right: -14px; }
 
     .symbol {
-        display: inline-block; } }
+        display: inline-block; }
+    .write-comment{
+        width: 70%;
+    }
+}
 @media all and (max-width: 767px) {
     .top-header {
         height: 71px;
@@ -444,7 +455,11 @@ input {
         padding-left: 32px;
         padding-right: 32px; }
     .left-header {
-        font-size: 34px; }
+        font-size: 34px;
+    }
+    .write-comment{
+        width: 84%;
+    }
 }
 
 @media all and (max-width: 640px) {
