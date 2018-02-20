@@ -8,7 +8,8 @@ angular.module("myApp", ['pubnub.angular.service'])
         Pubnub.init({
             publish_key: 'pub-c-92d96d75-2ae0-4233-aa40-d9767530b195',
             subscribe_key: 'sub-c-7fb592b8-14b8-11e8-92ea-7a3d09c63f1f',
-            uuid: $scope.uuid
+            uuid: $scope.uuid,
+            ssl: true
         });
 
         // Send the messages over PubNub Network
@@ -38,26 +39,28 @@ angular.module("myApp", ['pubnub.angular.service'])
 
         $scope.messages = [];
 
-// Subscribing to the ‘messages-channel’ and trigering the message callback
+        // Subscribing to the ‘messages-channel’ and trigering the message callback
         Pubnub.subscribe({
             channel: $scope.channel,
             triggerEvents: ['callback']
         });
 
-// Listening to the callbacks
+        // Listening to the callbacks
         $scope.$on(Pubnub.getMessageEventNameFor($scope.channel), function (ngEvent, m) {
             $scope.$apply(function () {
                 $scope.messages.push(m);
             });
         });
 
-// A function to display a nice uniq robot avatar
+        // A function to display a nice uniq robot avatar
         $scope.avatarUrl = function(uuid){
-            return 'http://robohash.org/'+uuid+'?set=set2&bgset=bg2&size=70x70';
+            var element = document.getElementById("comments");
+            element.scrollTop = element.scrollHeight + 100;
+            return 'https://robohash.org/'+uuid+'?set=set2&bgset=bg2&size=70x70';
         };
 
-        $scope.isActive = false;
 
+        $scope.isActive = false;
         //Search
         $scope.searchFunction = function () {
             $scope.isActive = !$scope.isActive;

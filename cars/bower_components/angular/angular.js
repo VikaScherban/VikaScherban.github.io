@@ -1933,7 +1933,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#controller
            * @module ng
-           * @param {string|Object} name Controller name, or an object map of controllers where the
+           * @param {string|Object} name Controller name, or an object map.js of controllers where the
            *    keys are the names and the values are the constructors.
            * @param {Function} constructor Controller constructor function.
            * @description
@@ -1945,7 +1945,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#directive
            * @module ng
-           * @param {string|Object} name Directive name, or an object map of directives where the
+           * @param {string|Object} name Directive name, or an object map.js of directives where the
            *    keys are the names and the values are the factories.
            * @param {Function} directiveFactory Factory function for creating new instance of
            * directives.
@@ -5682,7 +5682,7 @@ function $CacheFactoryProvider() {
    * @description
    * Get information about all the caches that have been created
    *
-   * @returns {Object} - key-value map of `cacheId` to the result of calling `cache#info`
+   * @returns {Object} - key-value map.js of `cacheId` to the result of calling `cache#info`
    */
     cacheFactory.info = function() {
       var info = {};
@@ -6527,7 +6527,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    * Register a new directive with the compiler.
    *
    * @param {string|Object} name Name of the directive in camel-case (i.e. <code>ngBind</code> which
-   *    will match as <code>ng-bind</code>), or an object map of directives where the keys are the
+   *    will match as <code>ng-bind</code>), or an object map.js of directives where the keys are the
    *    names and the values are the factories.
    * @param {Function|Array} directiveFactory An injectable directive factory function. See
    *    {@link guide/directive} for more info.
@@ -8314,7 +8314,7 @@ function directiveNormalize(name) {
  * @name $compile.directive.Attributes#$attr
  *
  * @description
- * A map of DOM element attribute names to the normalized name. This is
+ * A map.js of DOM element attribute names to the normalized name. This is
  * needed to do reverse lookup from normalized name back to actual name.
  */
 
@@ -8409,7 +8409,7 @@ function $ControllerProvider() {
   /**
    * @ngdoc method
    * @name $controllerProvider#register
-   * @param {string|Object} name Controller name, or an object map of controllers where the keys are
+   * @param {string|Object} name Controller name, or an object map.js of controllers where the keys are
    *    the names and the values are the constructors.
    * @param {Function|Array} constructor Controller constructor fn (optionally decorated with DI
    *    annotations in the array notation).
@@ -16702,7 +16702,7 @@ function $FilterProvider($provide) {
   /**
    * @ngdoc method
    * @name $filterProvider#register
-   * @param {string|Object} name Name of the filter function, or an object map of filters where
+   * @param {string|Object} name Name of the filter function, or an object map.js of filters where
    *    the keys are the filter names and the values are the filter factories.
    *
    *    <div class="alert alert-warning">
@@ -16711,7 +16711,7 @@ function $FilterProvider($provide) {
    *    your filters, then you can use capitalization (`myappSubsectionFilterx`) or underscores
    *    (`myapp_subsection_filterx`).
    *    </div>
-   * @returns {Object} Registered filter instance, or if a map of filters was provided then a map
+   * @returns {Object} Registered filter instance, or if a map.js of filters was provided then a map.js
    *    of the registered filter instances.
    */
   function register(name, factory) {

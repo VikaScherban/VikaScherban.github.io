@@ -98,14 +98,14 @@ function $RouteProvider() {
    *      - `{Array.<Object>}` - route parameters extracted from the current
    *        `$location.path()` by applying the current route
    *
-   *    - `resolve` - `{Object.<string, function>=}` - An optional map of dependencies which should
+   *    - `resolve` - `{Object.<string, function>=}` - An optional map.js of dependencies which should
    *      be injected into the controller. If any of these dependencies are promises, the router
    *      will wait for them all to be resolved or one to be rejected before the controller is
    *      instantiated.
    *      If all the promises are resolved successfully, the values of the resolved promises are
    *      injected and {@link ngRoute.$route#$routeChangeSuccess $routeChangeSuccess} event is
    *      fired. If any of the promises are rejected the
-   *      {@link ngRoute.$route#$routeChangeError $routeChangeError} event is fired. The map object
+   *      {@link ngRoute.$route#$routeChangeError $routeChangeError} event is fired. The map.js object
    *      is:
    *
    *      - `key` – `{string}`: a name of a dependency to be injected into the controller.
