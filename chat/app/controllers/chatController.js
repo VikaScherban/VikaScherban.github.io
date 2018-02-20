@@ -8,7 +8,8 @@ angular.module("myApp", ['pubnub.angular.service'])
         Pubnub.init({
             publish_key: 'pub-c-92d96d75-2ae0-4233-aa40-d9767530b195',
             subscribe_key: 'sub-c-7fb592b8-14b8-11e8-92ea-7a3d09c63f1f',
-            uuid: $scope.uuid
+            uuid: $scope.uuid,
+            ssl: true
         });
 
         // Send the messages over PubNub Network
