@@ -111,6 +111,8 @@ angular.module("myApp", ['pubnub.angular.service'])
             // Reset the messageContent input
             $scope.messageContent = '';
 
+            var element = document.getElementById("mainWrapper");
+            element.scrollTop = 2 * element.scrollHeight;
         };
 
         $scope.messages = [];
@@ -132,6 +134,7 @@ angular.module("myApp", ['pubnub.angular.service'])
         $scope.avatarUrl = function(uuid){
             var element = document.getElementById("comments");
             element.scrollTop = element.scrollHeight + 100;
+
 
             for (var i = 0; i < $scope.messages.length; i++ ){
                 createMarker($scope.messages[i].pos);
