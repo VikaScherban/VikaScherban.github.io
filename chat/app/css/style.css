@@ -281,7 +281,7 @@ input {
     opacity: 0.7; }
 
 .write-comment {
-    width: 80%;
+    width: 72%;
     margin-top: 5px;
     z-index: 1;
 }
@@ -418,11 +418,12 @@ input {
         width: 46px;
         background-image: url(../images/submit.png);
         background-position: 8px 24px;
-        background-color: white;
+        background-color: transparent;
         box-shadow: none;
         padding-left: 0;
         color: transparent;
         margin-right: -14px; }
+
     .symbol {
         display: inline-block; } }
 @media all and (max-width: 767px) {
@@ -483,4 +484,28 @@ input {
     .nav-button{
         width: 115px;
     }
+    .share, .mark, .nav-button{
+        display: none;
+    }
+    .com-avatar{
+        width: 70px;
+        height: 70px;
+    }
+    .user-text{
+        width: 145px;
+        margin-left: 5px;
+    }
+    .user-comment{
+        width: 100%;
+    }
+    .date-block{
+        margin-right: 0;
+    }
+    .like-block{
+        display: none;
+    }
+    .date{
+        padding-left: 2px;
+    }
+
 }

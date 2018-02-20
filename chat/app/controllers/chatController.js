@@ -32,9 +32,6 @@ angular.module("myApp", ['pubnub.angular.service'])
             // Reset the messageContent input
             $scope.messageContent = '';
 
-            var element = document.getElementById("comments");
-            element.scrollTop = element.scrollHeight;
-
         };
 
         $scope.messages = [];
@@ -54,6 +51,8 @@ angular.module("myApp", ['pubnub.angular.service'])
 
 // A function to display a nice uniq robot avatar
         $scope.avatarUrl = function(uuid){
+            var element = document.getElementById("comments");
+            element.scrollTop = element.scrollHeight + 100;
             return 'https://robohash.org/'+uuid+'?set=set2&bgset=bg2&size=70x70';
         };
 
