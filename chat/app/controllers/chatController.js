@@ -8,7 +8,7 @@ angular.module("myApp", ['pubnub.angular.service'])
 
         //Map
         var mapOptions = {
-            zoom: 4,
+            zoom: 3,
             center: new google.maps.LatLng(40.0000, -98.0000),
             mapTypeId: google.maps.MapTypeId.TERRAIN
         };
