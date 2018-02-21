@@ -111,8 +111,7 @@ angular.module("myApp", ['pubnub.angular.service'])
             // Reset the messageContent input
             $scope.messageContent = '';
 
-            var element = document.getElementById("mainWrapper");
-            element.scrollTop = 2 * element.scrollHeight;
+            window.scrollTo(0,document.body.scrollHeight);
         };
 
         $scope.messages = [];

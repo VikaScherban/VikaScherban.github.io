@@ -498,6 +498,16 @@ input {
     .content{
         height: calc(100vh - 300px);
     }
+    .comment-text{
+        height: 60px;
+        background-position: 23px 12px;
+    }
+    .footer{
+        height: 70px;
+    }
+    .submit-button{
+        margin-top: -12px;
+    }
 }
 
 @media (max-width: 520px) {
