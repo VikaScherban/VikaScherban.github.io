@@ -148,5 +148,4 @@ angular.module("myApp", ['pubnub.angular.service'])
             $scope.isActive = !$scope.isActive;
         };
 
-
     });
