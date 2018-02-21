@@ -499,7 +499,7 @@ input {
         height: 100%;
     }
     .content .comments{
-        margin-bottom: 100px;
+        padding-bottom: 100px;
     }
     .comment-text{
         height: 60px;
