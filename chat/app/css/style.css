@@ -508,6 +508,9 @@ input {
     .submit-button{
         margin-top: -12px;
     }
+    #map{
+        height: 250px;
+    }
 }
 
 @media (max-width: 520px) {
