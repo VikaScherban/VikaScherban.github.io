@@ -77,8 +77,6 @@ angular.module("myApp", ['pubnub.angular.service'])
                 }
             }
 
-
-
         };
 
         //PubNub
