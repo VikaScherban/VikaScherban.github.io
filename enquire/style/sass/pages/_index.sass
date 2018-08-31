@@ -194,16 +194,18 @@
   height: 317px
   padding: 38px
   cursor: pointer
-  +media(md)
-    padding: 15px
-.article-block-bottom
+  position: relative
   &:before
+    width: calc(100% - 76px)
     content: ""
     display: block
     height: 20px
-    position: relative
-    top: 256px
+    position: absolute
+    top: 235px
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 75%)
+  +media(md)
+    padding: 15px
+.article-block-bottom
   &:hover .article-img__tittle
     color: #DBA857
   &:hover .fa-param
